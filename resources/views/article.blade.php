@@ -11,7 +11,7 @@
     <h5 class="text-center my-3 pt-3">{{ $article->subtitle }}</h5>
     <div class="container">
         <p class="text-center">
-            {{ $article->content }}
+            {!! $article->content !!}
         </p>
     </div>
 </div>
