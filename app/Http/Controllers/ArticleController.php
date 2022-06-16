@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ArticleRequest;
+use App\Manager\ArticleManager;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    private $articleManager;
+
+    public function __construct(ArticleManager $articleManager)
+    {
+        $this->articleManager = $articleManager;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +23,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::paginate(7);
-        return view('articles.index',[
+        return view('articles.index', [
             'articles' =>$articles,
         ]);
     }
@@ -40,13 +47,14 @@ class ArticleController extends Controller
     public function store(ArticleRequest $request)
     {
         $validated = $request->validated();
+        $this->articleManager->build(new Article(),$request);
 
-        Article::create([
-            'title'=>$request->input('title'),
-            'subtitle'=>$request->input('subtitle'),
-            'content'=>$request->input('content'),
-        ]) ;
-        return redirect()->route('articles.index')->with("success","l'article a bien été sauvegardé");
+        // Article::create([
+        //     'title'=>$request->input('title'),
+        //     'subtitle'=>$request->input('subtitle'),
+        //     'content'=>$request->input('content'),
+        // ]) ;
+        return redirect()->route('articles.index')->with("success", "l'article a bien été sauvegardé");
     }
 
     /**
@@ -66,9 +74,11 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Article $article)
     {
-        //
+        return view("articles.edit", [
+            'articles' => $article
+        ]);
     }
 
     /**
@@ -78,9 +88,15 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Article $article)
     {
-        //
+        $this->articleManager->build($article, $request);
+
+        // $article->title = $request->input('title');
+        // $article->subtitle = $request->input('subtitle');
+        // $article->content = $request->input('content');
+        // $article->save();
+        return redirect()->route('articles.index')->with('success', "L'article a bien modifié !");
     }
 
     /**
@@ -89,9 +105,9 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete(Article $article){
-
+    public function delete(Article $article)
+    {
         $article->delete();
-        return redirect()->route('articles.index')->with('success',"L'article a bien été supprimé !");
-}
+        return redirect()->route('articles.index')->with('success', "L'article a bien été supprimé !");
+    }
 }

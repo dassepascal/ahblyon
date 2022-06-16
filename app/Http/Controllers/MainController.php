@@ -16,8 +16,8 @@ class Maincontroller extends Controller
         $articles = Article::paginate(4);
 
         return view('articles', [
-           'articles'=>$articles
-       ]);
+        'articles'=>$articles
+    ]);
     }
     public function show(Article $article)
     {
@@ -27,7 +27,4 @@ class Maincontroller extends Controller
     'article'=>$article,
         ]);
     }
-
-    
-
 }
