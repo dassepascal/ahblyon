@@ -10,6 +10,9 @@
            <div class="card my-3">
                <div class="card-body">
                 <h5 class="card-title ">{{ $article->title }}</h5>
+                <div class="d-flex justify-content-center">
+                    <span class="cat  ">{{ $article->category->label }}</span>
+                </div>
                 <p class="card-text">{{ $article->subtitle }}</p>
                 <a href="{{ route('article', $article->slug)}}" class="btn btn-primary"> Lire la suite</a>
                </div>
@@ -21,7 +24,7 @@
        @endforeach
    </div>
 <div class="d-flex justify-content-center mt-5">{{ $articles->links() }}
-   
+
 </div>
 
 </div>

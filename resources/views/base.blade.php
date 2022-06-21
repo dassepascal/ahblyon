@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    @include('incs.header')
+    {{-- @include('incs.header') --}}
     @include('incs.navbar')
     <div class="container justify-content-center mt-3">
         @include('incs/flash')

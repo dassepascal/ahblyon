@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Faker\Factory;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class ArticleSeeder extends Seeder
@@ -15,15 +16,23 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Factory::create();
+$categories= Category::get()->each(function($categtory){
+    \app\Models\Article::factory(5)->create([
+        'category_id' =>$categtory->id
+    ]);
+});
 
-      for($i = 0 ; $i < 26 ;$i++){
-                Article::create([
-                'title' => $faker->sentence(),
-                'subtitle' => $faker->sentence(),
-                 'content'=> $faker->text($maxNbChars = 600)
-                ]);
-            }
+
+    //     $faker = Factory::create();
+
+    //   for($i = 0 ; $i < 26 ;$i++){
+    //             Article::create([
+    //             'title' => $faker->sentence(),
+    //             'subtitle' => $faker->sentence(),
+    //              'content'=> $faker->text($maxNbChars = 600),
+    //              'category_id'=>Category::inRandomOrder()->first()->id
+    //             ]);
+    //         }
 
     }
 }

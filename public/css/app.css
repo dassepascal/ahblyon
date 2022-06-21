@@ -11292,3 +11292,10 @@ textarea.form-control-lg {
   font-size: 0.875em;
   color: #dc3545;
 }
+
+.cat {
+  background-color: #cd50c9;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}

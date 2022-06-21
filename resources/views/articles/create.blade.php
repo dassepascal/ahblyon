@@ -3,6 +3,7 @@
     <div class="container">
         <h1 class="text-center mt-5">Poster un nouvel article</h1>
         <form action="{{ route('articles.store') }}" method="post">
+            {{-- @dump($categories) --}}
             @csrf
             <div class="col-12">
                 <div class="form-group">
@@ -27,10 +28,18 @@
                     @enderror
                 </div>
             </div>
-            <div class="col-12">
-                <div class="form-group">
-                    <label> Contenu</label>
 
+<div class="col-12">
+    <div class="form-group">
+        <label for="category">Categorie</label>
+        <select name="category" id="" class="form-select">
+            @foreach ($categories as $category)
+            <option value="{{ $category->id }}"> {{ $category->label }}</option>
+
+            @endforeach
+        </select>
+    </div>
+</div>
                     <textarea id="tinycme-editor" name="content" class="form-control w-100 @error('content') is-invalid @enderror"></textarea>
                     @error('content')
                         <span class="invalid-feedback" role="alert">
