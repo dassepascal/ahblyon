@@ -22,11 +22,27 @@
 </head>
 
 <body>
-    {{-- @include('incs.header') --}}
-    @include('incs.navbar')
+    <div class="header">
+        {{-- <div class="p-2 bd-highlight header__logo ">
+            <img src="{{asset('images/logo.png')}}" alt="image du logo" width=45vw
+            class="img-fluid ">
+        </div>
+            <div class="header__title">
+                <h1 class="bg-warning"> Association Kongodania</h1>
+            </div> --}}
+
+        <div class="header__navbar">
+            @include('incs.navbar')
+        </div>
+
+    </div>
+
+
     <div class="container justify-content-center mt-3">
         @include('incs/flash')
         @yield('content')
+      
+        @include('incs.footer')
 
 
     </div>

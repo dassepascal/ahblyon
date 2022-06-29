@@ -29,5 +29,8 @@
                 "barryvdh/laravel-ide-helper"
             ]
         }
+    },
+    "dependencies": {
+        "minireset.css": "^0.0.7"
     }
 }

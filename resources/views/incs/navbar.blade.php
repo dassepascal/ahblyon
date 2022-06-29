@@ -1,40 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="nav-link active" aria-current="page" href="{{ route('home')}}">
-        Accueil</a>
+<nav class="navbar ligth-mode " role="navigation">
+    <div class="navbar__logo">
+        <img src="{{asset('images/logo.png')}}" alt="image du logo" width=45vw>
+  <span  class="ligne" ><h1> Association Kongodania</h1></span>
+    </div>
+    <ul class="navbar__links">
+        <li class="navbar__link first"><a href="{{ route('home')}}">Accueil</a></li>
 
+        <li class="navbar__link second"><a href="{{route('infos')}}">Je m'informe</a></li>
+        <li class="navbar__link third"><a href="{{ route ('parraine') }}">Je parraine</a></li>
+        <li class="navbar__link four"><a href="{{ route ('don') }}">Je fais un don</a></li>
+        <li class="navbar__link five"><a href="{{ route('contact') }}">Contact</a></li>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto ">
-          <li class="nav-item mx-3">
-            <a class="nav-link" href="{{ route('articles')}}">Articles</a>
+    </ul>
+    <ul class="navbar-nav ml-auto ">
+        @if (Auth::user())
+        @if (Auth::user()->role === 'ADMIN')
+        <li class="nav-item ">
+            <a class="nav-link" href="{{ route('articles.index')}} "> Espace Admin</a>
           </li>
-        </ul>
-        <ul class="navbar-nav ml-auto ">
-            @if (Auth::user())
-            @if (Auth::user()->role === 'ADMIN')
-            <li class="nav-item ">
-                <a class="nav-link" href="{{ route('articles.index')}} "> Espace Admin</a>
-              </li>
-            @endif
-            <li class="nav-item">
-                <form action="{{ route('logout')}}" method="post">
-                    @csrf
-                <button type="submit" class="btn">Déconnexion</button>
-            </form>
+        @endif
+        <li class="nav-item">
+            <form action="{{ route('logout')}}" method="post">
+                @csrf
+            <button type="submit" class="btn">Déconnexion</button>
+        </form>
 
-              </li>
+          </li>
 
-            @else
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ route('login')}} ">Me connecter</a>
-              </li>
-            @endif
+        @else
+        <li class="nav-item active">
+            <a class="nav-link" href="{{ route('login')}} ">Me connecter</a>
+          </li>
+        @endif
 
-          </ul>
-      </div>
+      </ul>
+    <button class="burger">
+        <span class="bar"></span>
 
-  </nav>
+    </button>

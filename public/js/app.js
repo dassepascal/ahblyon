@@ -5228,6 +5228,18 @@ var app = new Vue({
   el: '#app'
 });
 
+function toggleMenu() {
+  var navbar = document.querySelector('.navbar');
+  var burger = document.querySelector('.burger');
+  burger.addEventListener('click', function () {
+    navbar.classList.toggle('show-nav');
+  });
+}
+
+console.log('je passe ici');
+toggleMenu();
+console.log('passe');
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

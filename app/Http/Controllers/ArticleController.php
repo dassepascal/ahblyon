@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ArticleRequest;
-use App\Manager\ArticleManager;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Manager\ArticleManager;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests\ArticleRequest;
 
 class ArticleController extends Controller
 {
@@ -27,6 +28,7 @@ class ArticleController extends Controller
         return view('articles.index', [
             'articles' =>$articles,
         ]);
+
     }
 
     /**
@@ -36,9 +38,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('articles.create',[
-            'categories'=> Category::all()
-        ]);
+        return view('articles.create');
+
     }
 
     /**
@@ -80,7 +81,9 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         return view("articles.edit", [
-            'articles' => $article
+            'articles' => $article,
+            // 'categories'=> Category::all()
+
         ]);
     }
 

@@ -1,5 +1,6 @@
 @extends('base')
 @section('content')
+
     <div class="container">
         <h1 class="text-center mt-5">Editer un nouvel article</h1>
         <form action="{{ route('articles.update',$articles->id) }}" method="post">
@@ -16,7 +17,7 @@
                     @enderror
                 </div>
             </div>
-            <div class="col-12">
+            {{-- <div class="col-12">
                 <div class="form-group">
                     <label>Sous-titre</label>
                     <input type="text" value="{{ $articles->subtitle}}"  name="subtitle" class="form-control @error('subitle') is-invalid @enderror" placeholder="Sous-titre de votre article" />
@@ -27,7 +28,18 @@
                         </span>
                     @enderror
                 </div>
-            </div>
+            </div> --}}
+            {{-- <div class="col-12">
+                <div class="form-group">
+                    <label for="category">Categorie</label>
+                    <select name="category" id="" class="form-select">
+                        @foreach ($categories as $category)
+                        <option value="{{ $category->id }}"> {{ $category->label }}</option>
+
+                        @endforeach
+                    </select>
+                </div>
+            </div> --}}
             <div class="col-12">
                 <div class="form-group">
                     <label> Contenu</label>

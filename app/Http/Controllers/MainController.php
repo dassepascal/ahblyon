@@ -9,11 +9,38 @@ class Maincontroller extends Controller
 {
     public function home()
     {
-        return view('home');
+        $articles = Article::paginate(4);
+        return view('home', [
+            'articles'=>$articles
+        ]);
     }
+    public function infos(){
+        return view('infos');
+    }
+    public function parraine(){
+        return view ('parraine');
+    }
+    public function don(){
+        return view ('don');
+    }
+    public function mentionsLegales(){
+        return view ('mentions-legales');
+    }
+    public function faq(){
+        return view('faq');
+    }
+    public function contact(){
+
+        return view ('contact');
+    }
+
+
     public function index()
     {
-        $articles = Article::paginate(4);
+        $articles = Article::select("*")
+        ->orderBy("created_at","desc")
+        ->get()
+        ->paginate(4);
 
         return view('articles', [
         'articles'=>$articles
