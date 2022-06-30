@@ -42,7 +42,7 @@ Route::delete('/admin/articles/{article}/delete',[ArticleController::class,'dele
 //     dd(env('DB_DATABASE')); // Dump 'db' variable value one by one
 // });
 
-// Route::get('/clear-cache', function() {
-//     Artisan::call('cache:clear');
-//     return "Cache is cleared";
-// });
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
+});

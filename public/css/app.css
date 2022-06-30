@@ -11288,6 +11288,32 @@ textarea.form-control-lg {
   }
 }
 /* general*/
+.header__items > div {
+  background-color: #ccc;
+  border: 1px solid #999;
+  height: 90px;
+}
+
+.header__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 5fr;
+  height: 88px;
+  align-items: center;
+}
+
+.header__items .header__title {
+  display: block;
+  height: 90px;
+  line-height: 90px;
+  background: red;
+}
+
+.header__items.title {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
 .row > * {
   flex-shrink: 0;
   width: 100%;
@@ -11339,7 +11365,7 @@ body {
 /*header*/
 .header {
   border: 1px solid red;
-  min-height: 120px;
+  min-height: 90px;
 }
 
 /* Navbar */
@@ -11347,11 +11373,12 @@ body {
   display: flex;
   /* margin-top: 1rem; */
   align-items: center;
-  justify-content: space-between;
-  height: 80px;
+  justify-content: flex-end;
+  height: 90px;
   padding: 10px;
   background: var(--navbar-bg-color);
   color: var(--navbar-color);
+  background: #24d753;
 }
 
 .navbar__links {
@@ -11372,40 +11399,15 @@ body {
 }
 
 /* xl device */
-@media screen and (min-width: 1000px) {
-  .navbar__logo {
-    width: 400px;
-    background: #ededed;
-    /* display: flex; */
-    /* flex-direction: row; */
-  }
-
-  .ligne {
-    width: 500px;
-  }
-
-  .ligne h1, .ligne .h1 {
-    color: green;
-  }
-}
 /* Small devices */
 @media screen and (max-width: 767.98px) {
-  .ligne {
-    width: 100px;
-    margin-left: 10px;
-  }
-
-  .navbar__logo {
-    display: flex;
-  }
-
   .navbar__links {
     display: flex;
     flex-direction: column;
     width: 0;
     height: calc(100vh - 65px);
     position: absolute;
-    top: 80px;
+    top: 90px;
     /*hauteur de la hauteur du menu navbar(height)*/
     right: 0;
     background: var(--navbar-bg-color);
@@ -11461,7 +11463,8 @@ body {
     background: transparent;
   }
 
-  .bar::before, .bar::after {
+  .bar::before,
+.bar::after {
     content: "";
     width: 45px;
     height: 4px;
@@ -11522,19 +11525,5 @@ body {
 
   .navbar__link:hover > a::after {
     width: 100%;
-  }
-
-  .ligne {
-    width: 100%;
-    margin-left: 10px;
-  }
-
-  .ligne h1, .ligne .h1 {
-    color: red;
-    font-size: clamp(1rem, 2.5vw, 1.8rem);
-  }
-
-  .navbar__logo {
-    display: flex;
   }
 }
