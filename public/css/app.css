@@ -11297,21 +11297,15 @@ textarea.form-control-lg {
 .header__items {
   display: grid;
   grid-template-columns: 1fr 1fr 5fr;
-  height: 88px;
   align-items: center;
 }
 
 .header__items .header__title {
-  display: block;
-  height: 90px;
-  line-height: 90px;
+  display: table-cell;
   background: red;
-}
-
-.header__items.title {
-  display: flex;
-  align-items: center;
   color: white;
+  border: 1px solid black;
+  align-items: center;
 }
 
 .row > * {
