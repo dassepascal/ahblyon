@@ -25,6 +25,7 @@ Route::get('/contact',[MainController::class,'contact'])->name('contact');
 Route::get('/infos',[MainController::class,'infos'])->name('infos');
 Route::get('/parraine',[MainController::class,'parraine'])->name('parraine');
 Route::get('/don',[MainController::class,'don'])->name('don');
+Route::get('/archives', [MainController::class,'archives'])->name('archives');
 
 Route::get('faq',[MainController::class,'faq'])->name('faq');
 Route::get('/mentions-legales',[MainController::class,'mentionsLegales'])->name('mentions-legales');

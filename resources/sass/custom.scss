@@ -1,7 +1,7 @@
 /* general*/
 .header__items > div {
-  background-color: #ccc;
-  border: 1px solid #999;
+//   background-color: #ccc;
+//   border: 1px solid #999;
   height: 90px;
 }
 .header__items {
@@ -14,9 +14,9 @@
   display: table-cell;
 //   height: 90px;
 //   line-height: 90px;
-  background: red;
-  color: white;
-  border: 1px solid black;
+
+
+
   align-items: center;
 }
 // .header__items .title {
@@ -77,7 +77,7 @@ body {
 /*header*/
 
 .header {
-  border: 1px solid red;
+
   min-height: 90px;
 }
 /* Navbar */
@@ -90,7 +90,7 @@ body {
   padding: 10px;
   background: var(--navbar-bg-color);
   color: var(--navbar-color);
-  background: rgb(36, 215, 83);
+
 }
 .navbar__links {
   display: flex;
@@ -204,9 +204,9 @@ body {
 .show-nav .five {
   transition: all 1.4s ease-out;
 }
-// .show-nav .six {
-//   transition: all 1.5s ease-out;
-// }
+.show-nav .six {
+  transition: all 1.5s ease-out;
+}
 
 /* medium devives */
 @media screen and (min-width: 768px) {

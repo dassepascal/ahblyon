@@ -23,6 +23,9 @@ class Maincontroller extends Controller
     public function don(){
         return view ('don');
     }
+    public function archives(){
+        return view('archives');
+    }
     public function mentionsLegales(){
         return view ('mentions-legales');
     }

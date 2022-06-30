@@ -11289,8 +11289,6 @@ textarea.form-control-lg {
 }
 /* general*/
 .header__items > div {
-  background-color: #ccc;
-  border: 1px solid #999;
   height: 90px;
 }
 
@@ -11302,9 +11300,6 @@ textarea.form-control-lg {
 
 .header__items .header__title {
   display: table-cell;
-  background: red;
-  color: white;
-  border: 1px solid black;
   align-items: center;
 }
 
@@ -11358,7 +11353,6 @@ body {
 
 /*header*/
 .header {
-  border: 1px solid red;
   min-height: 90px;
 }
 
@@ -11372,7 +11366,6 @@ body {
   padding: 10px;
   background: var(--navbar-bg-color);
   color: var(--navbar-color);
-  background: #24d753;
 }
 
 .navbar__links {
@@ -11504,6 +11497,10 @@ body {
 
 .show-nav .five {
   transition: all 1.4s ease-out;
+}
+
+.show-nav .six {
+  transition: all 1.5s ease-out;
 }
 
 /* medium devives */

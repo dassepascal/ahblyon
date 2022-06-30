@@ -15,7 +15,7 @@ class ArticleFactory extends Factory
     {
         return [
             'title' =>$this->faker->sentence(),
-            'subtitle'=>$this->faker->sentence(),
+           
             'content' =>$this->faker->sentence(),
         ];
     }

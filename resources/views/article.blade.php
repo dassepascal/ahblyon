@@ -9,10 +9,10 @@
         <a class="btn btn-primary" href="{{ route('home') }}">
         Retour</a>
     </div>
-    <h5 class="text-center my-3 pt-3">{{ $article->subtitle }}</h5>
-<div class="d-flex justify-content-center">
-    <span class="cat  ">{{ $article->category->label }}</span>
-</div>
+
+{{-- <div class="d-flex justify-content-center">
+
+</div> --}}
     <div class="container">
 </div>
 

@@ -17,20 +17,7 @@
                     @enderror
                 </div>
             </div>
-            <div class="col-12">
-                <div class="form-group">
-
-
-                    <small class="form-text text-muted ">Décrivez le contenu de votre article, le théme traité</small>
-                    {{-- @error('subtitle')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }} </strong>
-                        </span>
-                    @enderror --}}
-                </div>
-            </div>
-
-            
+         
             <textarea id="tinycme-editor" name="content" class="form-control w-100 @error('content') is-invalid @enderror"></textarea>
             @error('content')
                 <span class="invalid-feedback" role="alert">

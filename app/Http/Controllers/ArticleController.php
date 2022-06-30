@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
-use App\Models\Category;
+
 use Illuminate\Http\Request;
 use App\Manager\ArticleManager;
 use Illuminate\Support\Facades\DB;
@@ -82,7 +82,7 @@ class ArticleController extends Controller
     {
         return view("articles.edit", [
             'articles' => $article,
-          
+
 
         ]);
     }

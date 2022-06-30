@@ -1,11 +1,13 @@
 <nav class="navbar ligth-mode " role="navigation">
-   
+
     <ul class="navbar__links">
         <li class="navbar__link first"><a href="{{ route('home')}}">Accueil</a></li>
         <li class="navbar__link second"><a href="{{route('infos')}}">Je m'informe</a></li>
         <li class="navbar__link third"><a href="{{ route ('parraine') }}">Je parraine</a></li>
         <li class="navbar__link four"><a href="{{ route ('don') }}">Je fais un don</a></li>
-        <li class="navbar__link five"><a href="{{ route('contact') }}">Contact</a></li>
+        <li class="navbar__link five"><a href="{{ route('archives') }}">Archives</a></li>
+        <li class="navbar__link six"><a href="{{ route('contact') }}">Contact</a></li>
+
 
 
     </ul>
