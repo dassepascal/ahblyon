@@ -23,21 +23,21 @@
 
 <body>
     <div class="header">
-        {{-- <div class="">
+        <div class="">
             @include('incs.navbar-admin')
-        </div> --}}
+        </div>
         <div class="header__items">
-            {{-- <div class="header__item header__logo ">
+            <div class="header__item header__logo ">
                 <img src="{{asset('images/logo.png')}}" alt="image du logo" width=45vw
                 class="img-fluid ">
-            </div> --}}
-                {{-- <div class="header__item header__title"><h1 >Association Kongodania</h1></div> --}}
+            </div>
+                <div class="header__item header__title"><h1 >Association Kongodania</h1></div>
 
 
 
-            {{-- <div class="header__item header__navbar">
+            <div class="header__item header__navbar">
                 @include('incs.navbar')
-            </div> --}}
+            </div>
 
         </div>
 
@@ -47,9 +47,9 @@
 
     <div class="container justify-content-center mt-3">
         @include('incs/flash')
-        {{-- @yield('content') --}}
+        @yield('content')
 
-        {{-- @include('incs.footer') --}}
+        @include('incs.footer')
 
 
     </div>

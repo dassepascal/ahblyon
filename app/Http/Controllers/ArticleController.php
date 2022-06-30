@@ -82,7 +82,7 @@ class ArticleController extends Controller
     {
         return view("articles.edit", [
             'articles' => $article,
-            // 'categories'=> Category::all()
+          
 
         ]);
     }
