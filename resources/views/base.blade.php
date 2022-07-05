@@ -26,12 +26,12 @@
         <div class="">
             @include('incs.navbar-admin')
         </div>
-        <div class="header__items">
+        {{-- <div class="header__items">
             <div class="header__item header__logo ">
                 <img src="{{asset('images/logo.png')}}" alt="image du logo" width=45vw
                 class="img-fluid ">
-            </div>
-                <div class="header__item header__title"><h1 >Association Kongodania</h1></div>
+            </div> --}}
+                {{-- <div class="header__item header__title"><h1 >Association Kongodania</h1></div> --}}
 
 
 

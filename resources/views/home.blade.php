@@ -52,7 +52,7 @@
                                     <h5 class="card-title ">{{ $article->title }}</h5>
 
                                     <p class="card-text">
-                                        <span class="publie">Publié le : {{ $article->created_at }}</span>
+                                        <span class="publie">Publié le : {{ $article->dateFormated() }}</span>
                                     </p>
 
                                     <a href="{{ route('article', $article->slug) }}" class="btn btn-primary"> Lire la

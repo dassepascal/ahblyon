@@ -14,34 +14,40 @@ class Maincontroller extends Controller
             'articles'=>$articles
         ]);
     }
-    public function infos(){
+    public function infos()
+    {
         return view('infos');
     }
-    public function parraine(){
-        return view ('parraine');
+    public function parraine()
+    {
+        return view('parraine');
     }
-    public function don(){
-        return view ('don');
+    public function don()
+    {
+        return view('don');
     }
-    public function archives(){
+    public function archives()
+    {
         return view('archives');
     }
-    public function mentionsLegales(){
-        return view ('mentions-legales');
+    public function mentionsLegales()
+    {
+        return view('mentions-legales');
     }
-    public function faq(){
+    public function faq()
+    {
         return view('faq');
     }
-    public function contact(){
-
-        return view ('contact');
+    public function contact()
+    {
+        return view('contact');
     }
 
 
     public function index()
     {
         $articles = Article::select("*")
-        ->orderBy("created_at","desc")
+        ->orderBy("created_at", "desc")
         ->get()
         ->paginate(4);
 

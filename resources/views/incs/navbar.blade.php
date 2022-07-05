@@ -1,5 +1,10 @@
 <nav class="navbar ligth-mode " role="navigation">
-
+ <div class="header__items">
+            <div class="header__item header__logo ">
+                <img src="{{asset('images/logo-kongodiana.jpg')}}" alt="image du logo" width=80
+                class="img-fluid ">
+            </div>
+              <div class="header__item header__title"><h1 ></h1></div>
     <ul class="navbar__links">
         <li class="navbar__link first"><a href="{{ route('home')}}">Accueil</a></li>
         <li class="navbar__link second"><a href="{{route('infos')}}">Je m'informe</a></li>
