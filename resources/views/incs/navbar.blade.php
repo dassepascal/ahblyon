@@ -1,22 +1,24 @@
 <nav class="navbar ligth-mode " role="navigation">
- <div class="header__items">
-            <div class="header__item header__logo ">
-                <img src="{{asset('images/logo-kongodiana.jpg')}}" alt="image du logo" width=80
-                class="img-fluid ">
-            </div>
-              <div class="header__item header__title"><h1 ></h1></div>
+    <div class="navbar__logo">
+        <img src="{{asset('images/logo-kongodiana.jpg') }}" alt="logo de l'association kongodania" width="80">
+  <span  class="ligne" ><h1> Association Kongodania</h1></span>
+    </div>
     <ul class="navbar__links">
-        <li class="navbar__link first"><a href="{{ route('home')}}">Accueil</a></li>
-        <li class="navbar__link second"><a href="{{route('infos')}}">Je m'informe</a></li>
-        <li class="navbar__link third"><a href="{{ route ('parraine') }}">Je parraine</a></li>
-        <li class="navbar__link four"><a href="{{ route ('don') }}">Je fais un don</a></li>
-        <li class="navbar__link five"><a href="{{ route('archives') }}">Archives</a></li>
-        <li class="navbar__link six"><a href="{{ route('contact') }}">Contact</a></li>
-
-
+        <li class="navbar__link first"><a href="#">Accueil</a></li>
+        <li class="navbar__link second"><a href="#">Je m'informe</a></li>
+        <li class="navbar__link third"><a href="#">Je parraine</a></li>
+        <li class="navbar__link four"><a href="#">Je fais un don</a></li>
+        <li class="navbar__link five"><a href="#">Contact</a></li>
 
     </ul>
-    {{-- <ul class="navbar-nav ml-auto ">
+    <button class="burger">
+        <span class="bar"></span>
+
+    </button>
+</nav>
+
+
+ {{-- <ul class="navbar-nav ml-auto ">
         @if (Auth::user())
         @if (Auth::user()->role === 'ADMIN')
         <li class="nav-item ">
@@ -38,7 +40,3 @@
         @endif
 
       </ul> --}}
-    <button class="burger">
-        <span class="bar"></span>
-
-    </button>

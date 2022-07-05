@@ -8,8 +8,8 @@
         referrerpolicy="origin"></script>
     <script src="https://kit.fontawesome.com/20ea8add13.js" crossorigin="anonymous"></script>
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}"   >
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -26,20 +26,10 @@
         <div class="">
             @include('incs.navbar-admin')
         </div>
-        {{-- <div class="header__items">
-            <div class="header__item header__logo ">
-                <img src="{{asset('images/logo.png')}}" alt="image du logo" width=45vw
-                class="img-fluid ">
-            </div> --}}
-                {{-- <div class="header__item header__title"><h1 >Association Kongodania</h1></div> --}}
+        @include('incs.navbar')
 
 
 
-            <div class="header__item header__navbar">
-                @include('incs.navbar')
-            </div>
-
-        </div>
 
 
     </div>
