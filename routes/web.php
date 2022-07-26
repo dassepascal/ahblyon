@@ -24,6 +24,9 @@ Route::get('/articles', [MainController::class,'index'])->name('articles');
 Route::get('/contact',[MainController::class,'contact'])->name('contact');
 Route::get('/infos',[MainController::class,'infos'])->name('infos');
 Route::get('/parraine',[MainController::class,'parraine'])->name('parraine');
+Route::get('/projets',[MainController::class,'projets'])->name('projets');
+Route::get('/association',[MainController::class,'association'])->name('association');
+Route::get('village',[MainController::class,'village'])->name('village');
 Route::get('/don',[MainController::class,'don'])->name('don');
 Route::get('/archives', [MainController::class,'archives'])->name('archives');
 

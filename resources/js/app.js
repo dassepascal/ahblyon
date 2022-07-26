@@ -30,15 +30,22 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
-
+const articles = document.querySelector('#articles');
+articles.style.background = 'green';
 function toggleMenu (){
 
+console.log(articles);
     const navbar = document.querySelector('.navbar');
     const burger = document.querySelector('.burger');
     burger.addEventListener('click',()=>{
 navbar.classList.toggle('show-nav');
+
+articles.style.background = 'blue';
+
     })
 }
 console.log('je passe ici');
-toggleMenu();
-console.log('passe');
+ toggleMenu();
+
+
+

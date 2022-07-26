@@ -11292,6 +11292,10 @@ h1, .h1 {
   font-weight: bold;
 }
 
+p {
+  font-size: 1rem;
+}
+
 /* Fonts*/
 /* Variables */
 :root {
@@ -11348,6 +11352,7 @@ body {
   padding: 10px;
   background: var(--navbar-bg-color);
   color: var(--navbar-color);
+  z-index: 1;
 }
 
 .navbar__links {
@@ -11403,6 +11408,7 @@ body {
 
   .show-nav .navbar__links {
     width: 100%;
+    background: red;
   }
 
   .show-nav .navbar__link {
@@ -11531,4 +11537,10 @@ body {
   .navbar__logo {
     display: flex;
   }
+}
+#cercle .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #000;
 }

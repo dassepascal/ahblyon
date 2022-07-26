@@ -5227,18 +5227,21 @@ Vue.component('example-component', (__webpack_require__(/*! ./components/Example
 var app = new Vue({
   el: '#app'
 });
+var articles = document.querySelector('#articles');
+articles.style.background = 'green';
 
 function toggleMenu() {
+  console.log(articles);
   var navbar = document.querySelector('.navbar');
   var burger = document.querySelector('.burger');
   burger.addEventListener('click', function () {
     navbar.classList.toggle('show-nav');
+    articles.style.background = 'blue';
   });
 }
 
 console.log('je passe ici');
 toggleMenu();
-console.log('passe');
 
 /***/ }),
 

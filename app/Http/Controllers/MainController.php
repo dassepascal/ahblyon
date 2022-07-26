@@ -22,6 +22,15 @@ class Maincontroller extends Controller
     {
         return view('parraine');
     }
+    public function projets(){
+        return view('projets');
+    }
+    public function association(){
+        return view('association');
+    }
+    public function village(){
+        return view('village');
+    }
     public function don()
     {
         return view('don');

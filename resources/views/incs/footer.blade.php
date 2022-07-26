@@ -1,18 +1,24 @@
 <footer class="bg-secondary">
 
-    <div class="row">
-        <div class="col">
-            <h3>Association Kongodania</h3>
-            <ul>
-                <li><a href="{{ route('parraine') }} ">Parainner un enfant</a></li>
-                <li><a href="{{ route('faq') }}">FAQ</a></li>
-                <li><a href="{{ route('mentions-legales') }}">Mentions Légales</a></li>
-            </ul>
+    <div class="row  ">
+        <div class="col-md-3">
+            <div class="card bg-secondary mt-2 ">
+                <div class="card-body">
+                    <h5 class="card-title">Association Kongodania</h5>
+                    <ul>
+                        <li><a href="{{ route('parraine') }} ">Parainner un enfant</a></li>
+                        <li><a href="{{ route('faq') }}">FAQ</a></li>
+                        <li><a href="{{ route('mentions-legales') }}">Mentions Légales</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
         </div>
-        <div class="col">
-            <address>
-                <h3>Contact</h3>
-                <p>
+        <div class="col-md-3">
+            <address class="card bg-secondary mt-2">
+                <h5 class="card-title">Contact</h5>
+                <p class-text>
                     AHBLYON <br>
                     9 rue Du Chemin <br>
                     69 000 Lyon <br>
@@ -22,16 +28,26 @@
             </address>
 
         </div>
-        <div class="col">
-            <h3>Newletter</h3>
-            <label>E-mail</label>
-            <input type="text" size="10" ><br>
-            <input type="checkbox" > En souscrivant à la newlettter; j'accepte les Mentions Légales de l'Association Kongodania
+        <div class="col-md-3">
+            <div class="card bg-secondary mt-2"></div>
+            <div class="card-body">
+                <h5 class="card-title">Newletter</h5>
+                <label>E-mail</label>
+                <input type="text" size="10" ><br>
+                <input type="checkbox" > En souscrivant à la newlettter; j'accepte les Mentions Légales de l'Association Kongodania
+            </div>
+
         </div>
-        <div class="col">
-            <h3>Réseaux sociaux</h3>
-            <span><a href="#">Facebook</a></span><br>
-            <span><a href="#">Twitter</a></span>
+        <div class="col-md-3">
+            <div class="card bg-secondary mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Réseaux sociaux</h5>
+                    <span><a href="#">Facebook</a></span><br>
+                    <span><a href="#">Twitter</a></span>
+                </div>
+
+            </div>
+
         </div>
     </div>
 
