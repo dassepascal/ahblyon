@@ -1,4 +1,35 @@
-<nav class="navbar ligth-mode " role="navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"> <img src="{{asset('images/logo-kongodiana.jpg') }}" alt="logo de l'association kongodania" width="80"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('home')}}">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('infos')}}">Je m'informe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('parraine')}}">Je parraine</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('don')}}">Je fais un don</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('contact')}}">Contact</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+{{-- <nav class="navbar ligth-mode " role="navigation">
     <div class="navbar__logo">
         <img src="{{asset('images/logo-kongodiana.jpg') }}" alt="logo de l'association kongodania" width="80">
   <span  class="ligne" ><h1> Association Kongodania</h1></span>
@@ -15,7 +46,7 @@
         <span class="bar"></span>
 
     </button>
-</nav>
+</nav> --}}
 
 
  {{-- <ul class="navbar-nav ml-auto ">

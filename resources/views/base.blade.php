@@ -23,9 +23,9 @@
 
 <body>
     <div class="header">
-        <div class="">
+        {{-- <div class="">
             @include('incs.navbar-admin')
-        </div>
+        </div> --}}
         @include('incs.navbar')
 
 
