@@ -1,4 +1,7 @@
 /* general*/
+.body{
+    background: green;
+}
 // #container-fluid{
 //     border: 1px solid black;
 
@@ -27,7 +30,6 @@
 // }
 
 /* Reset */
-// * {
 //   box-sizing: border-box;
 //   outline: none;
 //   margin: 0;
@@ -221,4 +223,16 @@
 //   }
 // }
 
-
+@media screen and (min-width: 768px) {
+    .navbar-toggle{
+        background-color: red;
+    }
+}
+@media screen and (max-width: 767.98px) {
+    .navbar{
+        background: green;
+    }
+    .body{
+        background: green;
+    }
+}

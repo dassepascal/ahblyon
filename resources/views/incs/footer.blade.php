@@ -1,4 +1,5 @@
-<footer class="bg-secondary">
+<footer >
+    <div class="bg-secondary mb-5">
 
     <div class="row  ">
         <div class="col-md-3">
@@ -50,5 +51,5 @@
 
         </div>
     </div>
-
+    </div>
 </footer>

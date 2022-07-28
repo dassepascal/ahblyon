@@ -26,10 +26,10 @@ Route::get('/infos',[MainController::class,'infos'])->name('infos');
 Route::get('/parraine',[MainController::class,'parraine'])->name('parraine');
 Route::get('/projets',[MainController::class,'projets'])->name('projets');
 Route::get('/association',[MainController::class,'association'])->name('association');
-Route::get('village',[MainController::class,'village'])->name('village');
+Route::get('/village',[MainController::class,'village'])->name('village');
 Route::get('/don',[MainController::class,'don'])->name('don');
 Route::get('/archives', [MainController::class,'archives'])->name('archives');
-
+Route::get('/aides',[MainController::class,'aides'])->name('aides');
 Route::get('faq',[MainController::class,'faq'])->name('faq');
 Route::get('/mentions-legales',[MainController::class,'mentionsLegales'])->name('mentions-legales');
 

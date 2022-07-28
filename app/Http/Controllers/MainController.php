@@ -28,6 +28,9 @@ class Maincontroller extends Controller
     public function association(){
         return view('association');
     }
+    public function aides(){
+        return view('aides');
+    }
     public function village(){
         return view('village');
     }

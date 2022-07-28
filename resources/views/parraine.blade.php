@@ -1,7 +1,7 @@
 @extends('base')
 
 @section('content')
-    <div class="p-5 mb-4 bg-light rounded-3 mt-5">
+    <div class="p-5 mb-4 bg-light rounded-3 mt-5 ">
 
         <h1 class="display-3 text-center">Je parraine</h1>
         <div class="articles row justify-content-center ">
