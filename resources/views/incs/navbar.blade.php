@@ -24,6 +24,7 @@
         </ul>
 
       </div>
+      @include('incs.navbar-admin')
     </div>
   </nav>
 

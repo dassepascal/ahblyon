@@ -5,7 +5,8 @@
 
     <div class="p-5 mb-4 bg-light rounded-3 mt-5">
         <p class="col-md-12 fs-4">Les enfants de Kongodiana, le village de brousse du Burkina Faso, ont besoin de nous, de
-            vous ! Aidons-les à construire leur avenir grâce à l’éducation
+            vous ! <br />
+             Aidons-les à construire leur avenir grâce à l’éducation
         </p>
 
         <div class="container-fluid  py-5">
@@ -25,7 +26,7 @@
                     </div>
                 </div>
              </section>
-        
+
 
      <section>
         <div class="p-5 mb-4 bg-light rounded-3 mt-5">

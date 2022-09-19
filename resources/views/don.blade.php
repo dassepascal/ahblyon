@@ -12,7 +12,7 @@
             <div class="card my-3">
                 <div class="card-body">
                     <h5 class="card-title ">Qu'est-ce qu'un don ?</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque repellat porro natus sed sapiente esse atque sint eius quae ipsum. </p>
+                    <p>  </p>
                     {{-- <a href="#" class="btn btn-primary"> Tout savoir sur le parrainage</a> --}}
                 </div>
             </div>
@@ -21,7 +21,7 @@
             <div class="card my-3">
                 <div class="card-body">
                     <h5 class="card-title ">Don mensuel ou ponctuel</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, consequuntur! </p>
+                    <p></p>
                     {{-- <a href="#" class="btn btn-primary"> </a> --}}
                 </div>
             </div>

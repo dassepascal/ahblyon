@@ -15,6 +15,7 @@ class ArticleController extends Controller
 
     public function __construct(ArticleManager $articleManager)
     {
+
         $this->articleManager = $articleManager;
     }
     /**
@@ -51,8 +52,7 @@ class ArticleController extends Controller
     public function store(ArticleRequest $request)
     {
         $validated = $request->validated();
-        $this->articleManager->build(new Article(),$request);
-
+        $this->articleManager->build(new Article(),$request);// todo 
         // Article::create([
         //     'title'=>$request->input('title'),
         //     'subtitle'=>$request->input('subtitle'),
@@ -94,14 +94,16 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(ArticleRequest $request, Article $article)
     {
+        //dd($this->articleManager);
         $this->articleManager->build($article, $request);
 
-        // $article->title = $request->input('title');
-        // $article->subtitle = $request->input('subtitle');
-        // $article->content = $request->input('content');
-        // $article->save();
+
+        //  $article->title = $request->input('title');
+        //  $article->subtitle = $request->input('subtitle');
+        //  $article->content = $request->input('content');
+        //  $article->save();
         return redirect()->route('articles.index')->with('success', "L'article a bien modifié !");
     }
 
