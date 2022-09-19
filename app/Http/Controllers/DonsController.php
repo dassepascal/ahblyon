@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dons;
+use App\Manager\DonManager;
 use Illuminate\Http\Request;
 use App\Http\Requests\DonRequest;
 
@@ -48,11 +49,26 @@ class DonsController extends Controller
 
     public function edit(Dons $dons)
     {
+        //dd($dons);
         return view(
             "dons.edit",
             [
                 'dons'=>$dons,
             ]
         );
+    }
+
+
+    public function update(DonRequest $request, Dons $dons){
+
+        //dd($dons);
+        $dons->title = $request->input('title');
+        $dons->content = $request ->input('content');
+        $dons->save();
+
+        //$this->DonManager->build($dons, $request);
+        return redirect()->route('dons.index')->with("success","Le don a bien été modifié !");
+
+
     }
 }

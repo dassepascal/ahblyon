@@ -26,7 +26,7 @@
                         {{-- <th>{{ $don->dateFormated() }}</th> --}}
                         <td class="d-flex">
                             {{-- editer --}}
-                            <a href="{{ route('dons.edit') }}" class="btn btn-warning mx-3">Editer</a>
+                            <a href="{{ route('dons.edit',$don->id) }}" class="btn btn-warning mx-3">Editer</a>
 
                             {{-- delete  creation d'un formulaire --}}
 

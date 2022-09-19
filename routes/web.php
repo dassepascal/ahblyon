@@ -45,8 +45,8 @@ Route::get('admin/articles',[ArticleController::class,'index'])->middleware('adm
 Route::get('admin/dons',[DonsController::class,'index'])->middleware('admin')->name('dons.index');
 Route::get('admin/dons/create', [DonsController::class,'create'])->middleware('admin')->name('dons.create');
 Route::post('admin/dons/store',[DonsController::class,'store'])->middleware('admin')->name('dons.store');
-Route::get('admin/dons/edit',[DonsController::class,'edit'])->middleware('admin')->name('dons.edit');
-Route::get('admin/dons/{don}/update',[DonsController::class,'update'])->middleware('admin')->name('update');
+Route::get('admin/dons/{dons}/edit',[DonsController::class,'edit'])->middleware('admin')->name('dons.edit');
+Route::put('admin/dons/{dons}/update',[DonsController::class,'update'])->middleware('admin')->name('dons.update');
 
 Route::get('/admin/articles/create', [ArticleController::class, 'create'])->middleware('admin')->name('articles.create');
 Route::post('/admin/articles/store',[ArticleController::class,'store'])->middleware('admin')->name('articles.store');
