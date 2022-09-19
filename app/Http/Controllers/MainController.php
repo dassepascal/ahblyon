@@ -54,6 +54,9 @@ class Maincontroller extends Controller
     {
         return view('contact');
     }
+    public function admin(){
+        return view('admin');
+    }
 
 
     public function index()

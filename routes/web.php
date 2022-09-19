@@ -37,7 +37,7 @@ Route::get('/articles/{article:slug}', [ MainController::class,'show'])->name('a
 Auth::routes();
 // espace admin
 // ajout d'un menu
-
+Route::get('/admin',[MainController::class,'admin'])->name('admin');
 
 
 Route::get('admin/articles',[ArticleController::class,'index'])->middleware('admin')->name('articles.index');
