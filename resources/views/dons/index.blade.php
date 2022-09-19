@@ -32,7 +32,7 @@
 
                             <button type="button" class="btn btn-danger"
                                 onclick="document.getElementById('modal-open-{{ $don->id }}').style.display='block'">Supprimer</button>
-                            <form action="#" method="POST">
+                            <form action="{{ route('dons.delete', $don->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <div class="modal" id='modal-open-{{ $don->id }}'>

@@ -9,6 +9,12 @@ use App\Http\Requests\DonRequest;
 
 class DonsController extends Controller
 {
+public function __construct(DonManager $donManager)
+{
+    $this->donManager = $donManager;
+
+}
+
     public function index()
     {
         $dons = Dons::all();
@@ -33,10 +39,12 @@ class DonsController extends Controller
     public function store(DonRequest $request)
     {
         $validated = $request->validated();
-        Dons::create([
-            'title'=>$request->input('title'),
-            'content'=>$request->input('content')
-        ]);
+
+        $this ->donManager->build(new Dons(), $request);
+        // Dons::create([
+        //     'title'=>$request->input('title'),
+        //     'content'=>$request->input('content')
+        // ]);
         return redirect()->route('dons.index')->with("success","le don a bien été mis à jour");
     }
 /**
@@ -60,15 +68,20 @@ class DonsController extends Controller
 
 
     public function update(DonRequest $request, Dons $dons){
+        //dd(get_class_methods($this->donManager));
 
         //dd($dons);
-        $dons->title = $request->input('title');
-        $dons->content = $request ->input('content');
-        $dons->save();
+        // $dons->title = $request->input('title');
+        // $dons->content = $request ->input('content');
+        // $dons->save();
 
-        //$this->DonManager->build($dons, $request);
+        $this->donManager->build($dons, $request);
         return redirect()->route('dons.index')->with("success","Le don a bien été modifié !");
 
 
+    }
+    public function delete(Dons $dons){
+        $dons->delete();
+        return redirect()->route('dons.index')->with('success', "le don a bien été supprimé");
     }
 }
