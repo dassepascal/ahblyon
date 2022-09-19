@@ -21,13 +21,13 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{ route('contact')}}">Contact</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a  class="nav-link active" aria-current="page" href="{{ route('admin') }}">Admin</a>
-          </li>
+          </li> --}}
         </ul>
 
       </div>
-      {{-- @include('incs.navbar-admin') --}}
+      @include('incs.navbar-admin')
 
     </div>
   </nav>

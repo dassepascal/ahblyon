@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\DonsController;
 use Illuminate\Console\Events\ArtisanStarting;
 
 /*
@@ -19,15 +20,15 @@ use Illuminate\Console\Events\ArtisanStarting;
 */
 
 Route::get('/', [MainController::class,'home'])->name('home');
-Route::get('/articles', [MainController::class,'index'])->name('articles');
-
+Route::get('/articles', [MainController::class,'indexArticles'])->name('articles');
+Route::get('/dons',[MainController::class,'indexDons'])->name('dons');
 Route::get('/contact',[MainController::class,'contact'])->name('contact');
 Route::get('/infos',[MainController::class,'infos'])->name('infos');
 Route::get('/parraine',[MainController::class,'parraine'])->name('parraine');
 Route::get('/projets',[MainController::class,'projets'])->name('projets');
 Route::get('/association',[MainController::class,'association'])->name('association');
 Route::get('/village',[MainController::class,'village'])->name('village');
-Route::get('/dons',[MainController::class,'dons'])->name('dons');
+//Route::get('/dons',[MainController::class,'dons'])->name('dons');
 Route::get('/archives', [MainController::class,'archives'])->name('archives');
 Route::get('/aides',[MainController::class,'aides'])->name('aides');
 Route::get('faq',[MainController::class,'faq'])->name('faq');
@@ -41,6 +42,11 @@ Route::get('/admin',[MainController::class,'admin'])->name('admin');
 
 
 Route::get('admin/articles',[ArticleController::class,'index'])->middleware('admin')->name('articles.index');
+Route::get('admin/dons',[DonsController::class,'index'])->middleware('admin')->name('dons.index');
+Route::get('admin/dons/create', [DonsController::class,'create'])->middleware('admin')->name('dons.create');
+Route::post('admin/dons/store',[DonsController::class,'store'])->middleware('admin')->name('dons.store');
+Route::get('admin/dons/edit',[DonsController::class,'edit'])->middleware('admin')->name('dons.edit');
+Route::get('admin/dons/{don}/update',[DonsController::class,'update'])->middleware('admin')->name('update');
 
 Route::get('/admin/articles/create', [ArticleController::class, 'create'])->middleware('admin')->name('articles.create');
 Route::post('/admin/articles/store',[ArticleController::class,'store'])->middleware('admin')->name('articles.store');

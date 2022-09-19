@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dons;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
@@ -34,10 +35,7 @@ class Maincontroller extends Controller
     public function village(){
         return view('village');
     }
-    public function dons()
-    {
-        return view('dons');
-    }
+
     public function archives()
     {
         return view('archives');
@@ -54,12 +52,12 @@ class Maincontroller extends Controller
     {
         return view('contact');
     }
-    public function admin(){
-        return view('admin');
-    }
+    // public function admin(){
+    //     return view('admin');
+    // }
 
 
-    public function index()
+    public function indexArticles()
     {
         $articles = Article::select("*")
         ->orderBy("created_at", "desc")
@@ -78,4 +76,12 @@ class Maincontroller extends Controller
     'article'=>$article,
         ]);
     }
+    public function indexDons(){
+        $dons = Dons::all();
+        //dd($dons);
+        return view('dons',[
+            'dons' =>$dons
+
+        ]);
+            }
 }
