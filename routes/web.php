@@ -27,7 +27,7 @@ Route::get('/parraine',[MainController::class,'parraine'])->name('parraine');
 Route::get('/projets',[MainController::class,'projets'])->name('projets');
 Route::get('/association',[MainController::class,'association'])->name('association');
 Route::get('/village',[MainController::class,'village'])->name('village');
-Route::get('/don',[MainController::class,'don'])->name('don');
+Route::get('/dons',[MainController::class,'dons'])->name('dons');
 Route::get('/archives', [MainController::class,'archives'])->name('archives');
 Route::get('/aides',[MainController::class,'aides'])->name('aides');
 Route::get('faq',[MainController::class,'faq'])->name('faq');

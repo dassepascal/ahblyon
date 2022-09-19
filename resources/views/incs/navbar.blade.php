@@ -16,7 +16,7 @@
             <a class="nav-link active" aria-current="page" href="{{ route('parraine')}}">Je parraine</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('don')}}">Je fais un don</a>
+            <a class="nav-link active" aria-current="page" href="{{ route('dons')}}">Je fais un don</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{ route('contact')}}">Contact</a>

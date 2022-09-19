@@ -34,9 +34,9 @@ class Maincontroller extends Controller
     public function village(){
         return view('village');
     }
-    public function don()
+    public function dons()
     {
-        return view('don');
+        return view('dons');
     }
     public function archives()
     {
