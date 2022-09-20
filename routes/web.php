@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\DonsController;
+use App\Http\Controllers\InformeController;
 use Illuminate\Console\Events\ArtisanStarting;
 
 /*
@@ -22,8 +23,10 @@ use Illuminate\Console\Events\ArtisanStarting;
 Route::get('/', [MainController::class,'home'])->name('home');
 Route::get('/articles', [MainController::class,'indexArticles'])->name('articles');
 Route::get('/dons', [MainController::class,'indexDons'])->name('dons');
+
+Route::get('/informes', [MainController::class,'indexInformes'])->name('informes');
 Route::get('/contact', [MainController::class,'contact'])->name('contact');
-Route::get('/infos', [MainController::class,'infos'])->name('infos');
+
 Route::get('/parraine', [MainController::class,'parraine'])->name('parraine');
 Route::get('/projets', [MainController::class,'projets'])->name('projets');
 Route::get('/association', [MainController::class,'association'])->name('association');
@@ -39,16 +42,20 @@ Auth::routes();
 // espace admin
 // ajout d'un menu
 Route::get('/admin', [MainController::class,'admin'])->name('admin');
+//informes
+Route::get('admin/informes',[InformeController::class,'index'])->middleware('admin')->name('informes.index');
 
 
-Route::get('admin/articles', [ArticleController::class,'index'])->middleware('admin')->name('articles.index');
+
+// dons
 Route::get('admin/dons', [DonsController::class,'index'])->middleware('admin')->name('dons.index');
 Route::get('admin/dons/create', [DonsController::class,'create'])->middleware('admin')->name('dons.create');
 Route::post('admin/dons/store', [DonsController::class,'store'])->middleware('admin')->name('dons.store');
 Route::get('admin/dons/{dons}/edit', [DonsController::class,'edit'])->middleware('admin')->name('dons.edit');
 Route::put('admin/dons/{dons}/update', [DonsController::class,'update'])->middleware('admin')->name('dons.update');
 Route::delete('admin/dons/{dons}/delete', [DonsController::class,'delete'])->middleware('admin')->name('dons.delete');
-
+//articles
+Route::get('admin/articles', [ArticleController::class,'index'])->middleware('admin')->name('articles.index');
 Route::get('/admin/articles/create', [ArticleController::class, 'create'])->middleware('admin')->name('articles.create');
 Route::post('/admin/articles/store', [ArticleController::class,'store'])->middleware('admin')->name('articles.store');
 Route::delete('/admin/articles/{article}/delete', [ArticleController::class,'delete'])->middleware('admin')->name('articles.delete');

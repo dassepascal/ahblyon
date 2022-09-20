@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dons;
 use App\Models\Article;
+use App\Models\Informe;
 use Illuminate\Http\Request;
 
 class Maincontroller extends Controller
@@ -15,24 +16,28 @@ class Maincontroller extends Controller
             'articles'=>$articles
         ]);
     }
-    public function infos()
-    {
-        return view('infos');
-    }
+    // public function infos()
+    // {
+    //     return view('infos');
+    // }
     public function parraine()
     {
         return view('parraine');
     }
-    public function projets(){
+    public function projets()
+    {
         return view('projets');
     }
-    public function association(){
+    public function association()
+    {
         return view('association');
     }
-    public function aides(){
+    public function aides()
+    {
         return view('aides');
     }
-    public function village(){
+    public function village()
+    {
         return view('village');
     }
 
@@ -76,12 +81,23 @@ class Maincontroller extends Controller
     'article'=>$article,
         ]);
     }
-    public function indexDons(){
+    public function indexDons()
+    {
         $dons = Dons::all();
         //dd($dons);
-        return view('dons',[
+        return view('dons', [
             'dons' =>$dons
 
         ]);
-            }
+    }
+    public function indexInformes(){
+        $informes = Informe::select("*")
+        ->orderBy("created_at", "desc")
+        ->get()
+        ->paginate(4);
+
+        return view('informes',[
+            'informes'=>$informes
+        ]);
+    }
 }
