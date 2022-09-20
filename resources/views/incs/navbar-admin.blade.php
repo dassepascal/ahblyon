@@ -1,16 +1,25 @@
  <ul class="navbar-nav ml-auto ">
         @if (Auth::user())
         @if (Auth::user()->role === 'ADMIN')
-        <li class="nav-item ">
-             Espace Admin
-            <ul>
+
+            {{-- <ul>
                 <li>
                     <a  href="{{ route('articles.index')}} ">Articles</a>
                 </li>
                 <li>
                     <a href="{{ route('dons.index') }}">Dons</a>
                 </li>
-            </ul>
+            </ul> --}}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Espace admin
+                </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="{{ route('articles.index')}} ">Articles</a></li>
+                <li><a href="{{ route('dons.index') }}">Dons</a></li>
+                <li><a href="#">Informe</a></li>
+                <li><a href="#">Paraine</a></li>
+              </ul>
           </li>
         @endif
         <li class="nav-item">
