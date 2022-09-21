@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dons;
 use App\Models\Article;
 use App\Models\Informe;
+use App\Models\Parraine;
 use Illuminate\Http\Request;
 
 class Maincontroller extends Controller
@@ -98,6 +99,16 @@ class Maincontroller extends Controller
 
         return view('informes',[
             'informes'=>$informes
+        ]);
+    }
+    public function indexParraines(){
+        $parraines = Parraine::select("*")
+        // ->orderBy("created_at", "desc")
+        // ->get()
+        ->paginate(4);
+
+        return view('parraines',[
+            'parraines'=>$parraines
         ]);
     }
 }
