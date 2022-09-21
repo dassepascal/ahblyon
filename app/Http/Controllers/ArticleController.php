@@ -52,12 +52,7 @@ class ArticleController extends Controller
     public function store(ArticleRequest $request)
     {
         $validated = $request->validated();
-        $this->articleManager->build(new Article(),$request);// todo 
-        // Article::create([
-        //     'title'=>$request->input('title'),
-        //     'subtitle'=>$request->input('subtitle'),
-        //     'content'=>$request->input('content'),
-        // ]) ;
+        $this->articleManager->build(new Article(),$request);// todo
         return redirect()->route('articles.index')->with("success", "l'article a bien été sauvegardé");
     }
 

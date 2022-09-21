@@ -7,6 +7,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\DonsController;
 use App\Http\Controllers\InformeController;
+use App\Models\Informe;
 use Illuminate\Console\Events\ArtisanStarting;
 
 /*
@@ -23,8 +24,8 @@ use Illuminate\Console\Events\ArtisanStarting;
 Route::get('/', [MainController::class,'home'])->name('home');
 Route::get('/articles', [MainController::class,'indexArticles'])->name('articles');
 Route::get('/dons', [MainController::class,'indexDons'])->name('dons');
-
 Route::get('/informes', [MainController::class,'indexInformes'])->name('informes');
+
 Route::get('/contact', [MainController::class,'contact'])->name('contact');
 
 Route::get('/parraine', [MainController::class,'parraine'])->name('parraine');
@@ -44,6 +45,12 @@ Auth::routes();
 Route::get('/admin', [MainController::class,'admin'])->name('admin');
 //informes
 Route::get('admin/informes',[InformeController::class,'index'])->middleware('admin')->name('informes.index');
+Route::get('admin/informes/create',[InformeController::class,'create'])->middleware('admin')->name('informes.create');
+Route::post('admin/informes/store',[InformeController::class,'store'])->middleware('admin')->name('informes.store');
+Route::get('admin/informes/{informes}/edit',[InformeController::class,'edit'])->middleware('admin')->name('informes.edit');
+Route::put('admin/informes/{informes}/update',[InformeController::class,'update'])->middleware('admin')->name('informes.update');
+Route::delete('admin/Informes/{informes}/delete',[InformeController::class,'delete'])->middleware('admin')->name('informes.delete');
+
 
 
 

@@ -10,6 +10,9 @@
                 <li>
                     <a href="{{ route('dons.index') }}">Dons</a>
                 </li>
+                <li>
+                    <a href="{{ route('informes.index') }}">informes</a>
+                </li>
             </ul>
           </li>
         @endif

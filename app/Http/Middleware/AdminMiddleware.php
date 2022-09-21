@@ -22,10 +22,9 @@ class AdminMiddleware
         if (!$user) {
             return redirect()->route('login');
         }
-       if($user->role !== User::ADMIN_ROLE){
-           return redirect()->route('login');
-       }
-
+        if ($user->role !== User::ADMIN_ROLE) {
+            return redirect()->route('login');
+        }
         return $next($request);
     }
 }

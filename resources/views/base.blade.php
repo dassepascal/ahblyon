@@ -38,7 +38,7 @@
         @include('incs.navbar')
         @include('incs/flash')
         @yield('content')
-        @include('incs.carouselle')
+        {{-- @include('incs.carouselle') --}}
         @include('incs.footer')
 
 

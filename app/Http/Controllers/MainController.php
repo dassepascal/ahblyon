@@ -92,8 +92,8 @@ class Maincontroller extends Controller
     }
     public function indexInformes(){
         $informes = Informe::select("*")
-        ->orderBy("created_at", "desc")
-        ->get()
+        // ->orderBy("created_at", "desc")
+        // ->get()
         ->paginate(4);
 
         return view('informes',[
