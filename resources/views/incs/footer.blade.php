@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Association Kongodania</h5>
                     <ul>
-                        <li><a href="{{ route('parraine') }} ">Parainner un enfant</a></li>
+                        <li><a href="{{ route('parraines') }} ">Parainner un enfant</a></li>
                         <li><a href="{{ route('faq') }}">FAQ</a></li>
                         <li><a href="{{ route('mentions-legales') }}">Mentions Légales</a></li>
                     </ul>

@@ -1,13 +1,14 @@
 <?php
 
+use App\Models\Informe;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\DonsController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\DonsController;
 use App\Http\Controllers\InformeController;
-use App\Models\Informe;
+use App\Http\Controllers\ParraineController;
 use Illuminate\Console\Events\ArtisanStarting;
 
 /*
@@ -27,9 +28,11 @@ Route::get('/dons', [MainController::class,'indexDons'])->name('dons');
 Route::get('/informes', [MainController::class,'indexInformes'])->name('informes');
 Route::get('/parraines',[MainController::class,'indexParraines'])->name('parraines');
 
+Route::get('/admin/parraines',[ParraineController::class,'index'])->middleware('admin')->name('parraines.index');
+
 Route::get('/contact', [MainController::class,'contact'])->name('contact');
 
-Route::get('/parraine', [MainController::class,'parraine'])->name('parraine');
+// Route::get('/parraine', [MainController::class,'parraine'])->name('parraine');
 Route::get('/projets', [MainController::class,'projets'])->name('projets');
 Route::get('/association', [MainController::class,'association'])->name('association');
 Route::get('/village', [MainController::class,'village'])->name('village');

@@ -13,6 +13,9 @@
                 <li>
                     <a href="{{ route('informes.index') }}">informes</a>
                 </li>
+                <li>
+                    <a href="{{ route('parraines.index') }}">parraines</a>
+                </li>
             </ul>
           </li>
         @endif
