@@ -105,7 +105,7 @@ class Maincontroller extends Controller
         $parraines = Parraine::select("*")
         // ->orderBy("created_at", "desc")
         // ->get()
-        ->paginate(4);
+        ->paginate(2);
 
         return view('parraines',[
             'parraines'=>$parraines

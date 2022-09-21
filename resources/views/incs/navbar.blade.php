@@ -13,7 +13,7 @@
             <a class="nav-link active" aria-current="page" href="{{ route('informes')}}">Je m'informe</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('parraine')}}">Je parraine</a>
+            <a class="nav-link active" aria-current="page" href="{{ route('parraines')}}">Je parraine</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{ route('dons')}}">Je fais un don</a>
