@@ -5,7 +5,7 @@
 <div class="container">
     <h1 class="text-center my-5">je m'informe</h1>
     <div class="d-flex justify-content-center">
-        <a class="btn btn-info my-4" href="#">Ajouter un nouveau texte</a>
+        <a class="btn btn-info my-4" href="{{ route('parraines.create') }}">Ajouter un nouveau texte</a>
     </div>
 
 

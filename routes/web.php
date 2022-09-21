@@ -29,6 +29,7 @@ Route::get('/informes', [MainController::class,'indexInformes'])->name('informes
 Route::get('/parraines',[MainController::class,'indexParraines'])->name('parraines');
 
 Route::get('/admin/parraines',[ParraineController::class,'index'])->middleware('admin')->name('parraines.index');
+Route::get('/admin/parraines/create',[ParraineController::class,'create'])->middleware('admin')->name('parraines.create');
 
 Route::get('/contact', [MainController::class,'contact'])->name('contact');
 

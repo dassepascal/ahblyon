@@ -13,7 +13,7 @@ class ParrainRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class ParrainRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title'=> 'required|min:6|max:150',
+            'content'=>'required'
         ];
     }
 }
