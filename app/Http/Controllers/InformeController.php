@@ -73,7 +73,7 @@ class InformeController extends Controller
     public function edit(Informe $informes)
 
     {
-        dd($informes);
+        //dd($informes);
         return view('informes.edit',[
             'informes' =>$informes,
         ]);
@@ -88,7 +88,10 @@ class InformeController extends Controller
      */
     public function update(InformeRequest $request, Informe $informe)
     {
-        dd($informe);
+        $informe->title = $request->input('title');
+        $informe->content = $request->input('content');
+        $informe->save();
+        return redirect()->route('informes.index')->with('success', 'l\'information a bien été modifié');
     }
 
     /**
