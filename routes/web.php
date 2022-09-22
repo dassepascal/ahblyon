@@ -33,6 +33,7 @@ Route::get('/admin/parraines/create',[ParraineController::class,'create'])->midd
 Route::post('/admin/parraines/store',[ParraineController::class,'store'])->middleware('admin')->name('parraines.store');
 Route::delete('admin/parraines/{parraine:slug}/delete',[ParraineController::class,'delete'])->middleware('admin')->name('parraines.delete');
 Route::get('/admin/parraines/{parraine}/edit',[ParraineController::class,'edit'])->middleware('admin')->name('parraines.edit');
+Route::put('/admin/parraines/{parraine}/update',[ParraineController::class,'update'])->middleware('admin')->name('parraines.update');
 Route::get('/contact', [MainController::class,'contact'])->name('contact');
 
 // Route::get('/parraine', [MainController::class,'parraine'])->name('parraine');

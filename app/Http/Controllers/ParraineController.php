@@ -66,7 +66,7 @@ class ParraineController extends Controller
      */
     public function edit(Parraine $parraine)
     {
-        dd($parraine);
+        //dd($parraine);
         return view('parraines.edit', [
             'parraine'=>$parraine,
         ]);
@@ -81,7 +81,10 @@ class ParraineController extends Controller
      */
     public function update(Request $request, Parraine $parraine)
     {
-        dd($parraine);
+        $parraine->title = $request->input('title');
+        $parraine->content = $request->input('content');
+        $parraine->save();
+        return redirect()->route('parraines.index')->with('success', 'le parrainage a bien été modifié');
     }
 
     /**
