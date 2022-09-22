@@ -30,7 +30,9 @@ Route::get('/parraines',[MainController::class,'indexParraines'])->name('parrain
 
 Route::get('/admin/parraines',[ParraineController::class,'index'])->middleware('admin')->name('parraines.index');
 Route::get('/admin/parraines/create',[ParraineController::class,'create'])->middleware('admin')->name('parraines.create');
-
+Route::post('/admin/parraines/store',[ParraineController::class,'store'])->middleware('admin')->name('parraines.store');
+Route::delete('admin/parraines/{parraine:slug}/delete',[ParraineController::class,'delete'])->middleware('admin')->name('parraines.delete');
+Route::get('/admin/parraines/edit',[ParraineController::class,'edit'])->middleware('admin')->name('parraines.edit');
 Route::get('/contact', [MainController::class,'contact'])->name('contact');
 
 // Route::get('/parraine', [MainController::class,'parraine'])->name('parraine');
@@ -49,14 +51,13 @@ Auth::routes();
 // ajout d'un menu
 Route::get('/admin', [MainController::class,'admin'])->name('admin');
 //informes
-Route::get('admin/informes',[InformeController::class,'index'])->middleware('admin')->name('informes.index');
-Route::get('admin/informes/create',[InformeController::class,'create'])->middleware('admin')->name('informes.create');
-Route::post('admin/informes/store',[InformeController::class,'store'])->middleware('admin')->name('informes.store');
-Route::get('admin/informes/{informes}/edit',[InformeController::class,'edit'])->middleware('admin')->name('informes.edit');
-Route::put('admin/informes/{informes}/update',[InformeController::class,'update'])->middleware('admin')->name('informes.update');
-Route::delete('admin/Informes/{informes}/delete',[InformeController::class,'delete'])->middleware('admin')->name('informes.delete');
-
-
+Route::get('/admin/informes',[InformeController::class,'index'])->middleware('admin')->name('informes.index');
+Route::get('/admin/informes/create',[InformeController::class,'create'])->middleware('admin')->name('informes.create');
+Route::post('/admin/informes/store',[InformeController::class,'store'])->middleware('admin')->name('informes.store');
+Route::get('/admin/informes/{informes}/edit',[InformeController::class,'edit'])->middleware('admin')->name('informes.edit');
+// mettre jour update // todo
+Route::put('/admin/informes/{informes}/update',[InformeController::class,'update'])->middleware('admin')->name('informes.update');
+Route::delete('/admin/informes/{informe:slug}/delete',[InformeController::class,'delete'])->middleware('admin')->name('informes.delete');
 
 
 // dons

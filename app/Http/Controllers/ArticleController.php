@@ -52,7 +52,7 @@ class ArticleController extends Controller
     public function store(ArticleRequest $request)
     {
         $validated = $request->validated();
-        $this->articleManager->build(new Article(),$request);// todo
+        $this->articleManager->build(new Article(), $request);// todo
         return redirect()->route('articles.index')->with("success", "l'article a bien été sauvegardé");
     }
 
@@ -110,6 +110,7 @@ class ArticleController extends Controller
      */
     public function delete(Article $article)
     {
+
         $article->delete();
         return redirect()->route('articles.index')->with('success', "L'article a bien été supprimé !");
     }

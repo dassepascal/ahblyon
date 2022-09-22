@@ -5,7 +5,7 @@
 <div class="container">
     <h1 class="text-center my-5">je m'informe</h1>
     <div class="d-flex justify-content-center">
-        <a class="btn btn-info my-4" href="{{ route('informes.create') }}">Ajouter une nouvelle information</a>
+        <a class="btn btn-info my-4" href="#">Ajouter une nouvelle information</a>
     </div>
 
 
@@ -32,7 +32,7 @@
 
                     <button type="button" class="btn btn-danger"
                         onclick="document.getElementById('modal-open-{{ $informe->id }}').style.display='block'">Supprimer</button>
-                    <form action="#" method="POST">
+                    <form action="{{ route('informes.delete',$informe->slug) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <div class="modal" id='modal-open-{{ $informe->id }}'>

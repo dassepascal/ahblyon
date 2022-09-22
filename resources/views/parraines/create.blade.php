@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <h1 class="text-center mt-5">Poster un nouveau texte</h1>
-        <form action="#" method="post">
+        <form action="{{ route('parraines.store') }}" method="post">
 
             @csrf
             <div class="col-12">

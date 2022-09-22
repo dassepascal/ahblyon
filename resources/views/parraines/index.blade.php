@@ -3,7 +3,7 @@
 {{-- @dump(Session::all()); --}}
 
 <div class="container">
-    <h1 class="text-center my-5">je m'informe</h1>
+    <h1 class="text-center my-5">je parraine</h1>
     <div class="d-flex justify-content-center">
         <a class="btn btn-info my-4" href="{{ route('parraines.create') }}">Ajouter un nouveau texte</a>
     </div>
@@ -26,13 +26,14 @@
                 {{-- <th>{{ $don->dateFormated() }}</th> --}}
                 <td class="d-flex">
                     {{-- editer --}}
-                    <a href="#" class="btn btn-warning mx-3">Editer</a>
+
+                    <a href="{{ route('parraines.edit',$parraine->id) }}" class="btn btn-warning mx-3">Editer</a>
 
                     {{-- delete creation d'un formulaire --}}
 
                     <button type="button" class="btn btn-danger"
                         onclick="document.getElementById('modal-open-{{ $parraine->id }}').style.display='block'">Supprimer</button>
-                    <form action="#" method="POST">
+                    <form action="{{ route ('parraines.delete',$parraine->slug) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <div class="modal" id='modal-open-{{ $parraine->id }}'>
