@@ -9,6 +9,7 @@
                 <li>
                     <a href="{{ route('dons.index') }}">Dons</a>
                 </li>
+<<<<<<< HEAD
             </ul> --}}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -20,6 +21,15 @@
                 <li><a href="#">Informe</a></li>
                 <li><a href="#">Paraine</a></li>
               </ul>
+=======
+                <li>
+                    <a href="{{ route('informes.index') }}">informes</a>
+                </li>
+                <li>
+                    <a href="{{ route('parraines.index') }}">parraines</a>
+                </li>
+            </ul>
+>>>>>>> master
           </li>
         @endif
         <li class="nav-item">

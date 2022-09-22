@@ -57,7 +57,7 @@ public function __construct(DonManager $donManager)
 
     public function edit(Dons $dons)
     {
-        //dd($dons);
+        dd($dons);
         return view(
             "dons.edit",
             [
