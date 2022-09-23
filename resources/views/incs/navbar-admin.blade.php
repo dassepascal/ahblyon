@@ -9,7 +9,6 @@
                 <li>
                     <a href="{{ route('dons.index') }}">Dons</a>
                 </li>
-<<<<<<< HEAD
             </ul> --}}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -18,18 +17,9 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a href="{{ route('articles.index')}} ">Articles</a></li>
                 <li><a href="{{ route('dons.index') }}">Dons</a></li>
-                <li><a href="#">Informe</a></li>
-                <li><a href="#">Paraine</a></li>
+                <li><a href="{{ route('parraines.index') }}">parraine</a></li>
+                <li><a href="{{ route('informes.index') }}">Informe</a></li>
               </ul>
-=======
-                <li>
-                    <a href="{{ route('informes.index') }}">informes</a>
-                </li>
-                <li>
-                    <a href="{{ route('parraines.index') }}">parraines</a>
-                </li>
-            </ul>
->>>>>>> master
           </li>
         @endif
         <li class="nav-item">
