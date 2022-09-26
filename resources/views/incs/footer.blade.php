@@ -1,7 +1,7 @@
 <footer>
     <div class="bg-secondary mb-5">
         <div class="row  ">
-            <div class="col-md-3 bg-danger">
+            <div class="col-md-3 ">
                 <div class="card bg-secondary mt-2 ms-2 mb-2">
                     <div class="card-body">
                         <h5 class="card-title">Association Kongodania</h5>
@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 bg-success">
+            <div class="col-md-3 ">
                 <address class="card bg-secondary mt-2 px-3 pt-3">
                     <h5 class="card-title">Contact</h5>
                     <p class-text>
@@ -25,7 +25,7 @@
                     </p>
                 </address>
             </div>
-            <div class="col-md-3 bg-danger">
+            <div class="col-md-3 ">
                 <div class="card bg-secondary mt-2 px-2 mb-2">
                     <div class="card-body">
                         <h5 class="card-title">Newletter</h5>
@@ -36,8 +36,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 bg-success">
-                <div class="card bg-secondary mt-2 mb-2">
+            <div class="col-md-3 ">
+                <div class="card bg-secondary mt-2 mb-2 me-2">
                     <div class="card-body">
                         <h5 class="card-title">Réseaux sociaux</h5>
                         <span><a href="#">Facebook</a></span><br>
