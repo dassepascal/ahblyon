@@ -15,7 +15,7 @@
                   Espace admin
                 </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a href="{{ route('articles.index')}} ">Articles</a></li>
+                <li><a href="{{ route('articles.index')}} ">Evenements</a></li>
                 <li><a href="{{ route('dons.index') }}">Dons</a></li>
                 <li><a href="{{ route('parraines.index') }}">parraine</a></li>
                 <li><a href="{{ route('informes.index') }}">Informe</a></li>
