@@ -6,10 +6,12 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\DonsController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\InformeController;
 use App\Http\Controllers\ParraineController;
 use Illuminate\Console\Events\ArtisanStarting;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,9 @@ use Illuminate\Console\Events\ArtisanStarting;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/admin/image-upload',[ImageController::class,'index']);
+Route::post('/admin/image-upload',[ImageController::class,'store'])->middleware('admin')->name('image.store');
 
 Route::get('/', [MainController::class,'home'])->name('home');
 Route::get('/articles', [MainController::class,'indexArticles'])->name('articles');
@@ -34,6 +39,7 @@ Route::post('/admin/parraines/store',[ParraineController::class,'store'])->middl
 Route::delete('admin/parraines/{parraine:slug}/delete',[ParraineController::class,'delete'])->middleware('admin')->name('parraines.delete');
 Route::get('/admin/parraines/{parraine}/edit',[ParraineController::class,'edit'])->middleware('admin')->name('parraines.edit');
 Route::put('/admin/parraines/{parraine}/update',[ParraineController::class,'update'])->middleware('admin')->name('parraines.update');
+
 Route::get('/contact', [MainController::class,'contact'])->name('contact');
 
 // Route::get('/parraine', [MainController::class,'parraine'])->name('parraine');
