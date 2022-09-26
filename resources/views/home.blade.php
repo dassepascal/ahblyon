@@ -61,7 +61,9 @@
 
         </div>
     </section>
-
+<section>
+    @include('photos')
+</section>
 
     </div>
     </div>

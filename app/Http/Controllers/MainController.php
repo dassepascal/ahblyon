@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dons;
+use App\Models\Photo;
 use App\Models\Article;
 use App\Models\Informe;
 use App\Models\Parraine;
@@ -13,8 +14,10 @@ class Maincontroller extends Controller
     public function home()
     {
         $articles = Article::paginate(4);
+        $photos = Photo::all();
         return view('home', [
-            'articles'=>$articles
+            'articles'=>$articles,
+            'photos'=>$photos,
         ]);
     }
     // public function infos()

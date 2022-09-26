@@ -26,4 +26,7 @@ class ImageController extends Controller
        return  redirect('admin/image-upload')->with('success', 'l\'image a bien été sauvegagé');
 
     }
+    public function indexPhoto(){
+        return view('photo.index');
+    }
 }
