@@ -23,7 +23,7 @@ class ImageController extends Controller
         $save->name = $name;
         $save->path = $path;
         $save->save();
-       return  redirect('.index');
+       return  redirect('admin/image-upload')->with('success', 'l\'image a bien été sauvegagé');
 
     }
 }

@@ -19,6 +19,7 @@
                 <li><a href="{{ route('dons.index') }}">Dons</a></li>
                 <li><a href="{{ route('parraines.index') }}">parraine</a></li>
                 <li><a href="{{ route('informes.index') }}">Informe</a></li>
+                {{-- Route store n'est pas defini  --}}
                 <li><a href="{{ route('image.store') }}">Image-upload</a></li>
               </ul>
           </li>

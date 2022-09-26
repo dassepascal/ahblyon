@@ -5,19 +5,20 @@
 
     <div class="panel panel-primary">
 
-        <h1>image</h1>
+        {{-- <h1>image</h1> --}}
 
         <div class="panel-body">
 
-            @if ($message = Session::get('success'))
+            {{-- @if ($message = Session::get('success'))
             <div class="alert alert-success alert-block">
                 <button type="button" class="close" data-dismiss="alert">×</button>
+
                 <strong>{{ $message }}</strong>
             </div>
-            <img src="images/{{ Session::get('image') }}">
-            @endif
 
-            <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
+            @endif --}}
+
+            <form action="{{ route('image.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">
