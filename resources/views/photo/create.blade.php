@@ -5,7 +5,7 @@
 
     <div class="panel panel-primary">
 
-        {{-- <h1>image</h1> --}}
+        <h1>image</h1>
 
         <div class="panel-body">
 
@@ -19,7 +19,7 @@
             @endif --}}
 
             <form action="{{ route('image.store') }}" method="POST" enctype="multipart/form-data">
-              
+@dump($categories)
                 @csrf
 
                 <div class="mb-3">
@@ -30,6 +30,17 @@
                     @error('image')
                     <span class="text-danger">{{ $message }}</span>
                     @enderror
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="category">Categorie</label>
+                        <select name= "category" id="" class="form-control">
+                            @foreach ($categories as $category)
+                            <option value="{{  $category->id }}">{{  $category->label }}
+                            </option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
                 <div class="mb-3">

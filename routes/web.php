@@ -26,6 +26,8 @@ use Illuminate\Console\Events\ArtisanStarting;
 
 Route::get('/admin/image-upload',[ImageController::class,'index'])->name('image.index');
 Route::post('/admin/image-upload',[ImageController::class,'store'])->middleware('admin')->name('image.store');
+Route::get('/admin/photos',[ImageController::class,'indexPhoto'])->middleware('admin')->name('photo.index');
+Route::get('/admin/photo/create',[ImageController::class,'create'])->middleware('admin')->name('photo.create');
 
 Route::get('/', [MainController::class,'home'])->name('home');
 Route::get('/articles', [MainController::class,'indexArticles'])->name('articles');
