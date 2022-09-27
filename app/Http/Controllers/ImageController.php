@@ -15,7 +15,7 @@ class ImageController extends Controller
     }
 
     public function store(Request $request){
-        dd($request);
+        //dd($request->category);
         $validationData = $request->validate([
             'image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 
@@ -23,7 +23,8 @@ class ImageController extends Controller
 
         $name = $request->file('image')->getClientOriginalName();
         $path = $request->file('image')->store('public/images');
-        $category_id = 'category_id';
+        $category_id= $request->category;
+
         $save = new Photo;
 
         $save->name = $name;
