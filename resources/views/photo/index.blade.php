@@ -29,7 +29,7 @@
                     <td class="d-flex">
                         {{-- editer --}}
 
-                        <a href="{{ route('parraines.edit',$photo->id) }}" class="btn btn-warning mx-3">Editer</a>
+                        <a href="#" class="btn btn-warning mx-3">Editer</a>
 
                         {{-- delete creation d'un formulaire --}}
 
