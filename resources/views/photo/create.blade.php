@@ -19,7 +19,7 @@
             @endif --}}
 
             <form action="{{ route('image.store') }}" method="POST" enctype="multipart/form-data">
-@dump($categories)
+
                 @csrf
 
                 <div class="mb-3">
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-success">Upload</button>
+                    <button type="submit" class="btn btn-success mt-2">Upload</button>
                 </div>
 
             </form>

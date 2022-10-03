@@ -28,6 +28,9 @@ Route::get('/admin/image-upload',[ImageController::class,'index'])->name('image.
 Route::post('/admin/image-upload',[ImageController::class,'store'])->middleware('admin')->name('image.store');
 Route::get('/admin/photos',[ImageController::class,'indexPhoto'])->middleware('admin')->name('photo.index');
 Route::get('/admin/photo/create',[ImageController::class,'create'])->middleware('admin')->name('photo.create');
+Route::delete('/admin/photo/{photo:id}/delete',[ImageController::class,'delete'])->middleware('admin')->name('photo.delete');
+Route::get('/admin/photo/{photo:id}/edit',[ImageController::class,'edit'])->middleware('admin')->name('photo.edit');
+Route::put('/admin/photo/{photo}/update',[ImageController::class,'update'])->middleware('admin')->name('photo.update');
 
 Route::get('/', [MainController::class,'home'])->name('home');
 Route::get('/articles', [MainController::class,'indexArticles'])->name('articles');

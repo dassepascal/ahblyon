@@ -29,13 +29,13 @@
                     <td class="d-flex">
                         {{-- editer --}}
 
-                        <a href="#" class="btn btn-warning mx-3">Editer</a>
+                        <a href="{{ route('photo.edit',$photo->id) }}" class="btn btn-warning mx-3">Editer</a>
 
                         {{-- delete creation d'un formulaire --}}
 
                         <button type="button" class="btn btn-danger"
                             onclick="document.getElementById('modal-open-{{ $photo->id }}').style.display='block'">Supprimer</button>
-                        <form action="#" method="POST">
+                        <form action="{{ route('photo.delete',$photo->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <div class="modal" id='modal-open-{{ $photo->id }}'>

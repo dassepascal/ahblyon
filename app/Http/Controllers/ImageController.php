@@ -19,6 +19,7 @@ class ImageController extends Controller
     {
         //dd($request->category);
         $validationData = $request->validate([
+
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 
         ]);
@@ -36,7 +37,7 @@ class ImageController extends Controller
 
         $save->name = $name;
         $save->path = $path;
-        
+
         $save->category_id = $category_id;
 
         $save->save();
@@ -55,5 +56,28 @@ class ImageController extends Controller
         return view('photo.create', [
             'categories' => Category::all(),
         ]);
+    }
+    public function delete(Photo $photo)
+    {
+        $photo->delete();
+
+        return redirect()->route('photo.index')->with('success', "la photo a bien été supprimé");
+    }
+
+    public function edit(Photo $photo)
+    {
+
+        return view('photo.edit', [
+            'photo' => $photo,
+            'categories' => Category::all(),
+
+        ]);
+    }
+    public function update(Request $request, Photo $photo)
+    {
+        //dd($photo->category_id);
+        $photo->category_id = $request->input('category');
+        $photo->save();
+        return redirect()->route('photo.index')->with('success','la photo a bien été mis à jour');
     }
 }
