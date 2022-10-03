@@ -6,6 +6,7 @@ use App\Models\Photo;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\PhotoRequest;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -14,37 +15,45 @@ class ImageController extends Controller
         return view('image');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         //dd($request->category);
         $validationData = $request->validate([
-            'image'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 
         ]);
-
-        $name = $request->file('image')->getClientOriginalName();
-        $path = $request->file('image')->store('public/images');
-        $category_id= $request->category;
+        $name = Storage::disk('local')->put('images', $request->image);
+        //$name = $request->file('image')->getClientOriginalName();
+        $filename = time() . '.' . $request->image->extension();
+        $path = $request->file('image')->storeAs(
+            'images',
+            $filename,
+            'public'
+        );
+        $category_id = $request->category;
 
         $save = new Photo;
 
         $save->name = $name;
         $save->path = $path;
+        
         $save->category_id = $category_id;
 
         $save->save();
         //$this->photoManager->build(new Photo(),$request);
-       return  redirect('admin/image-upload')->with('success', 'l\'image a bien été sauvegagé');
-
+        return  redirect('admin/image-upload')->with('success', 'l\'image a bien été sauvegagé');
     }
-    public function indexPhoto(){
+    public function indexPhoto()
+    {
         $photos = Photo::all();
-        return view('photo.index',[
-            'photos'=>$photos,
+        return view('photo.index', [
+            'photos' => $photos,
         ]);
     }
-    public function create(){
-        return view('photo.create',[
-            'categories'=>Category::all(),
+    public function create()
+    {
+        return view('photo.create', [
+            'categories' => Category::all(),
         ]);
     }
 }

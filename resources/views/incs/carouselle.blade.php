@@ -1,26 +1,26 @@
 
 <section>
     <div class="row">
-        {{-- <div class="col-md-4">
+        <div class="col-md-4">
             <div class="p-5 mb-4 bg-light rounded-3 mt-5 justify-content-center">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('images/carouselle/artisanat.jpg') }}" class="d-block w-100 " alt="artisanat">
+                           
 
                         </div>
-                        <div class="carousel-item">
+                        {{-- <div class="carousel-item">
                             <img src="{{ asset('images/carouselle/pict0023.jpg') }}" class="d-block w-100 " alt="...">
                         </div>
                         <div class="carousel-item">
                             <img src="{{ asset('images/carouselle/pict0054.jpg') }}" class="d-block w-100 " alt="...">
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 </div>
 
-        </div> --}}
-        <div class="col-md-6">
+        </div>
+        {{-- <div class="col-md-6">
 
             <div class="p-5 mb-6 bg-light rounded-3 mt-5 justify-content-center">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -77,6 +77,11 @@
                     </div>
                 </div>
                 </div>
-        </div>
+        </div> --}}
+
+
+
+
+        {{-- <img src="{{ Storage::url(post->image->path)}}" alt=""> --}}
     </div>
  </section>
