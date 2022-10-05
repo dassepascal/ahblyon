@@ -47,7 +47,14 @@ class Maincontroller extends Controller
 
     public function archives()
     {
-        return view('archives');
+
+        $archives = Article::orderBy('created_at','desc')->get();
+$archives= $archives->unique('created_at');
+
+
+        return view('archives',[
+            'archives'=> $archives,
+        ]);
     }
     public function mentionsLegales()
     {
