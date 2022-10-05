@@ -16,7 +16,7 @@
         </div>
 
 
-        <div class="col-md-6 d-flex bg-info justify-content-center align-items-center ">
+        <div class="col-md-6 d-flex  justify-content-center align-items-center ">
             <div id="carouselDroit" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner ">
                     @foreach ($photos as $photo)
