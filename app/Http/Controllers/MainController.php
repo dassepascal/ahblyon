@@ -54,15 +54,18 @@ class Maincontroller extends Controller
         ]);
     }
     public function archive($id){
+
        // $article = Article::where('slug', $slug)->firstOrFail();
        //requete qui correspond a tous les articles correspondant a id
        // trouver la date
-       $articles = Article::all();
+            $articles = Article::All();//todo paginate
+    //    dd($articles);
         $archive = Article::where('id',$id)->firstOrFail();
-        // dd($archive);
+
+
         return view('archive',[
             'archive'=>$archive,
-            'articles'=>$articles
+             'articles'=>$articles
         ]);
 
     }
