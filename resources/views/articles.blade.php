@@ -3,7 +3,7 @@
         <h1 id="evenements" class="display-3 text-center">Evénements </h1>
         <div class="articles row justify-content-center ">
             @foreach ($articles as $article)
-            @dump($article)
+            
             <div class="col-md-6">
                 <div class="card my-3">
                     <div class="card-body">

@@ -53,6 +53,7 @@ Route::get('/association', [MainController::class,'association'])->name('associa
 Route::get('/village', [MainController::class,'village'])->name('village');
 //Route::get('/dons',[MainController::class,'dons'])->name('dons');
 Route::get('/archives', [MainController::class,'archives'])->name('archives');
+Route::get('/archives/{archive:id}',[Maincontroller::class,'archive'])->name('archive');
 Route::get('/aides', [MainController::class,'aides'])->name('aides');
 Route::get('faq', [MainController::class,'faq'])->name('faq');
 Route::get('/mentions-legales', [MainController::class,'mentionsLegales'])->name('mentions-legales');
