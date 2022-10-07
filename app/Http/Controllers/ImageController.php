@@ -38,7 +38,7 @@ class ImageController extends Controller
 
         $save->name = $name;
         $save->path = $path;
-        
+
 
         $save->category_id = $category_id;
 
@@ -46,6 +46,9 @@ class ImageController extends Controller
         //$this->photoManager->build(new Photo(),$request);
         return  redirect('admin/image-upload')->with('success', 'l\'image a bien été sauvegagé');
     }
+
+
+
     public function indexPhoto()
     {
         $photos = Photo::all();
