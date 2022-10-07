@@ -1,9 +1,9 @@
 <div class="p-5 mb-4 bg-light rounded-3 mt-5">
     <div class="container-fluid ">
-        <h1 id="evenements" class="display-3 text-center">Evénements </h1>
+        <h1 id="evenements" class="display-3 text-center" class="h1">Evénements </h1>
         <div class="articles row justify-content-center ">
             @foreach ($articles as $article)
-            
+
             <div class="col-md-6">
                 <div class="card my-3">
                     <div class="card-body">

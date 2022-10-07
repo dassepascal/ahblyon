@@ -24,6 +24,7 @@ class ImageController extends Controller
 
         ]);
         $name = Storage::disk('local')->put('images', $request->image);
+
         //$name = $request->file('image')->getClientOriginalName();
         $filename = time() . '.' . $request->image->extension();
         $path = $request->file('image')->storeAs(
@@ -37,6 +38,7 @@ class ImageController extends Controller
 
         $save->name = $name;
         $save->path = $path;
+        
 
         $save->category_id = $category_id;
 
