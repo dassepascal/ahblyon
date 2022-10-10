@@ -23,7 +23,7 @@ class InformeController extends Controller
      */
     public function index()
     {
-        $informes = Informe::all();
+        $informes = Informe::paginate(2);
 
             return view('informes.index', [
                 'informes' =>$informes,
