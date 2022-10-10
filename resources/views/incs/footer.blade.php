@@ -1,8 +1,8 @@
 <footer>
     <div class="bg-secondary mb-5">
         <div class="row  ">
-            <div class="col-md-3 ">
-                <div class="card bg-secondary mt-2 ms-2 mb-2">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-secondary m-2  mb-2">
                     <div class="card-body">
                         <h5 class="card-title">Association Kongodania</h5>
                         <ul>
@@ -13,8 +13,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 ">
-                <address class="card bg-secondary mt-2 px-3 pt-3">
+            <div class="col-xl-3 col-md-6">
+                <address class="card bg-secondary m-2 px-3 pt-3">
                     <h5 class="card-title">Contact</h5>
                     <p class-text>
                         AHBLYON <br>
@@ -25,19 +25,19 @@
                     </p>
                 </address>
             </div>
-            <div class="col-md-3 ">
-                <div class="card bg-secondary mt-2 px-2 mb-2">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-secondary m-2 px-2 mb-2">
                     <div class="card-body">
                         <h5 class="card-title">Newletter</h5>
                         <label>E-mail</label>
-                        <input type="text" size="10"><br>
+                        <input type="text" size="20"><br>
                         <input type="checkbox"> En souscrivant à la newlettter; j'accepte les Mentions Légales de
                         l'Association Kongodania
                     </div>
                 </div>
             </div>
             <div class="col-md-3 ">
-                <div class="card bg-secondary mt-2 mb-2 me-2">
+                <div class="card bg-secondary m-2 mb-2 me-2">
                     <div class="card-body">
                         <h5 class="card-title">Réseaux sociaux</h5>
                         <span><a href="#">Facebook</a></span><br>

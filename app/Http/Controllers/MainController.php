@@ -47,7 +47,27 @@ class Maincontroller extends Controller
 
     public function archives()
     {
-        return view('archives');
+        $archives = Article::orderBy('created_at', 'desc')->get();
+        $archives= $archives->unique('created_at');
+        return view('archives', [
+            'archives'=> $archives,
+        ]);
+    }
+    public function archive($id){
+
+       // $article = Article::where('slug', $slug)->firstOrFail();
+       //requete qui correspond a tous les articles correspondant a id
+       // trouver la date
+            $articles = Article::All();//todo paginate
+    //    dd($articles);
+        $archive = Article::where('id',$id)->firstOrFail();
+
+
+        return view('archive',[
+            'archive'=>$archive,
+             'articles'=>$articles
+        ]);
+
     }
     public function mentionsLegales()
     {
@@ -94,23 +114,25 @@ class Maincontroller extends Controller
 
         ]);
     }
-    public function indexInformes(){
+    public function indexInformes()
+    {
         $informes = Informe::select("*")
         // ->orderBy("created_at", "desc")
         // ->get()
         ->paginate(4);
 
-        return view('informes',[
+        return view('informes', [
             'informes'=>$informes
         ]);
     }
-    public function indexParraines(){
+    public function indexParraines()
+    {
         $parraines = Parraine::select("*")
         // ->orderBy("created_at", "desc")
         // ->get()
         ->paginate(2);
 
-        return view('parraines',[
+        return view('parraines', [
             'parraines'=>$parraines
         ]);
     }

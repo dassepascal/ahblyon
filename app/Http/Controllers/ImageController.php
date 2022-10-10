@@ -24,6 +24,7 @@ class ImageController extends Controller
 
         ]);
         $name = Storage::disk('local')->put('images', $request->image);
+
         //$name = $request->file('image')->getClientOriginalName();
         $filename = time() . '.' . $request->image->extension();
         $path = $request->file('image')->storeAs(
@@ -38,15 +39,35 @@ class ImageController extends Controller
         $save->name = $name;
         $save->path = $path;
 
+
         $save->category_id = $category_id;
 
         $save->save();
         //$this->photoManager->build(new Photo(),$request);
         return  redirect('admin/image-upload')->with('success', 'l\'image a bien été sauvegagé');
     }
+
+    // public function deleteImage(Request $request)
+
+    // {
+
+    //     if(Storage::exists('image-upload/3w10y8KJhmb9q4YUmf9kCSNDrNY2k1VilPxM1LK.jpg.png')){
+
+    //         Storage::delete('image-upload/3w10y8KJhmb9q4YUmf9kCSNDrNY2k1VilPxM1LK.jpg.png');
+    //         dd('delete');
+
+    //     }else{
+
+    //         dd('File does not exists.');
+
+    //     }
+
+    // }
+
+
     public function indexPhoto()
     {
-        $photos = Photo::all();
+        $photos = Photo::paginate(8);
         return view('photo.index', [
             'photos' => $photos,
         ]);
@@ -57,8 +78,21 @@ class ImageController extends Controller
             'categories' => Category::all(),
         ]);
     }
-    public function delete(Photo $photo)
+    public function delete(Photo $photo,Request $request)
     {
+
+
+        // if(Storage::exists('image-upload/test.png')){
+
+        //     Storage::delete('image-upload/test.png');
+        //     dd('delete');
+
+        // }else{
+
+        //     dd('File does not exists.');
+
+        // }
+
         $photo->delete();
 
         return redirect()->route('photo.index')->with('success', "la photo a bien été supprimé");

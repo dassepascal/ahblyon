@@ -11288,29 +11288,13 @@ textarea.form-control-lg {
   }
 }
 /* general*/
-.body {
-  background: green;
-}
-
-/* Fonts*/
-/* Variables */
-/* Reset */
-/* Basic style */
-/* Navbar */
 @media screen and (min-width: 768px) {
-  .navbar-toggle {
-    background-color: red;
+  body {
+    background: green;
   }
 }
 @media screen and (max-width: 767.98px) {
-  .navbar {
-    background: green;
+  body {
+    background: #0b0080;
   }
-
-  .body {
-    background: green;
-  }
-}
-.gauche {
-  background-color: red;
 }

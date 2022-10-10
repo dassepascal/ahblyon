@@ -7,7 +7,8 @@
             @method('PUT')
             @csrf
             <div class="mt-2  ">
-                <img src="{{ Storage::url($photo->path)}}" alt="#" class="mx-auto d-block">
+                {{-- <img src="{{ Storage::url($photo->path)}}" alt="#" class="mx-auto d-block"> --}}
+                <img src="{{ url('/').'/storage/'.$photo->path}}" alt="#" class="d-block mx-auto">
             </div>
             {{-- <div class="col-12">
                 <div class="form-group">

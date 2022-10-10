@@ -34,7 +34,7 @@
                 <div class="col-12">
                     <div class="form-group">
                         <label for="category">Categories</label>
-                        <select name= "category"  class="form-control">
+                        <select name= "category"  class="form-select" aria-label="Default select example">
                             @foreach ($categories as $category)
                             <option value="{{  $category->id }}">{{  $category->label }}
                             </option>

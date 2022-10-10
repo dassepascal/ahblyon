@@ -23,14 +23,11 @@
             <tr>
                 <th>{{ $parraine->id }}</th>
                 <th>{{ $parraine->title }}</th>
-                {{-- <th>{{ $don->dateFormated() }}</th> --}}
+                <th>{{ $parraine->dateFormated() }}</th>
                 <td class="d-flex">
                     {{-- editer --}}
-
                     <a href="{{ route('parraines.edit',$parraine->id) }}" class="btn btn-warning mx-3">Editer</a>
-
                     {{-- delete creation d'un formulaire --}}
-
                     <button type="button" class="btn btn-danger"
                         onclick="document.getElementById('modal-open-{{ $parraine->id }}').style.display='block'">Supprimer</button>
                     <form action="{{ route ('parraines.delete',$parraine->slug) }}" method="POST">
@@ -67,8 +64,9 @@
 
         </tbody>
     </table>
+  <div class="d-flex justify-content-center mt-5">{{ $parraines->links() }}</div>
 </div>
-<div class="d-flex justify-content-center mt-5">{{ $parraines->links() }}</div>
-    </div>
-</div>
+
+
+
 @endsection

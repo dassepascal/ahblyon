@@ -66,7 +66,8 @@
 
             </tbody>
         </table>
+        <div class="d-flex justify-content-center mt-5">{{ $dons->links() }}</div>
     </div>
 
-    </div>
+
 @endsection

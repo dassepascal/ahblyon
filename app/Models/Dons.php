@@ -9,4 +9,7 @@ class Dons extends Model
 {
     use HasFactory;
     protected $fillable = ['title','content'];
+    public function dateFormated(){
+        return date_format($this->created_at,'d-m-Y',);
+    }
 }
