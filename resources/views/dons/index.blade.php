@@ -11,7 +11,7 @@
 <div  class="responsive-table-line" style="margin:0px auto; max-width:700px">
     <table class="table table-bordered table-condensed table-body-center">
         <thead>
-            <tr class="bg-primary">
+            <tr class="bg-primary text-light">
                 <th >Id</th>
                 <th>Titre</th>
                 <th >Crée le</th>

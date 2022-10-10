@@ -22,23 +22,12 @@
 </head>
 
 <body>
-    {{-- <div class="header">
-        <div class="">
-            @include('incs.navbar-admin')
-        </div>
-        @include('incs.navbar')
-
-
-
-
-
-    </div> --}}
 
     <div class="container justify-content-center mt-3 border border-darck shadow-lg p-3 mb-5 bg-body rounded">
         @include('incs.navbar')
         @include('incs/flash')
         @yield('content')
-        {{-- @include('incs.carouselle') --}}
+
         @include('incs.footer')
 
 

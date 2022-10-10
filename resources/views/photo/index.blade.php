@@ -9,24 +9,26 @@
         <a class="btn btn-info my-4" href="{{ route('photo.create') }}">Ajouter une photo</a>
     </div>
 
-<div class="table-responsive">
-    <table class="table table-hover">
+    <div  class="responsive-table-line" style="margin:0px auto; max-width:1106px">
+        <table class="table table-bordered table-condensed table-body-center">
         <thead>
-            <tr class="table-hover bg-primary text-light">
-                <th scope="col">Id</th>
-                <th scope="col">Nom</th>
-                <th scope="col">Chemin</th>
-                <th scope="col">Action</th>
+            <tr class=" bg-primary text-light">
+                <th >Id</th>
+                <th >Nom</th>
+                <th>Chemin</th>
+                <th>Date</th>
+
+                <th >Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($photos as $photo)
             <tr>
-                <th>{{ $photo->id }}</th>
-                <th>{{ $photo->name }}</th>
-                <th>{{ $photo->path }}</th>
-                {{-- <th>{{ $photo->dateFormated() }}</th> --}}
-                <td class="d-flex">
+                <td data-title="Id">{{ $photo->id }}</td>
+                <td data-title = "Nom" class="text-break">{{ $photo->name }} </td>
+                <td data-title = "Chemin">{{ $photo->path }}</td>
+                <td>{{ $photo->dateFormated() }}</td>
+                <td data-title="Action" class="d-flex">
                     {{-- editer --}}
 
                     <a href="{{ route('photo.edit',$photo->id) }}" class="btn btn-warning mx-3">Editer</a>

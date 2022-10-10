@@ -10,6 +10,9 @@ class Photo extends Model
 {
     use HasFactory;
     protected $fillable = ['name','path','category_id'];
+    public function dateFormated(){
+        return date_format($this->created_at,'d-m-Y',);
+    }
 
     public function category(){
         return $this->belongsTo(Category::class);

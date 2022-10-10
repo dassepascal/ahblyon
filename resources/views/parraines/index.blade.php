@@ -1,6 +1,5 @@
 @extends('base')
 @section('content')
-{{-- @dump(Session::all()); --}}
 
 <div class="container">
     <h1 class="text-center my-5">je parraine</h1>
@@ -8,23 +7,24 @@
         <a class="btn btn-info my-4" href="{{ route('parraines.create') }}">Ajouter un nouveau texte</a>
     </div>
 
-<div class="table-responsive">
-    <table class="table table-hover">
+    <div  class="responsive-table-line" style="margin:0px auto; max-width:1286px">
+        <table class="table table-bordered table-condensed table-body-center">
         <thead>
-            <tr class="table-hover bg-primary text-light">
-                <th scope="col">Id</th>
-                <th scope="col">Titre</th>
-                <th scope="col">Crée le</th>
-                <th scope="col">Action</th>
+            <tr class=" bg-primary text-light">
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Crée le</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($parraines as $parraine)
             <tr>
-                <th>{{ $parraine->id }}</th>
-                <th>{{ $parraine->title }}</th>
-                <th>{{ $parraine->dateFormated() }}</th>
-                <td class="d-flex">
+
+                <td data-title = "Id">{{ $parraine->id }}</td>
+                <td data-title = "Nom">{{ $parraine->title }}</td>
+                <td data-title = "Date">{{ $parraine->dateFormated() }}</td>
+                <td  data-title = "Action" class="d-flex">
                     {{-- editer --}}
                     <a href="{{ route('parraines.edit',$parraine->id) }}" class="btn btn-warning mx-3">Editer</a>
                     {{-- delete creation d'un formulaire --}}
@@ -65,7 +65,7 @@
         </tbody>
     </table>
 </div>
-  
+
   <div class="d-flex justify-content-center mt-5">{{ $parraines->links() }}</div>
 </div>
 

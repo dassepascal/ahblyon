@@ -8,8 +8,8 @@
             <a class="btn btn-info my-4" href="{{ route('articles.create') }}">Ajouter un nouvel article</a>
         </div>
 
-<div class="responsive-table-line" style="margin:0px auto; max-width:700px"">
-    <table class="table table-hover">
+<div class="responsive-table-line" style="margin:0px auto; max-width:1106px"">
+    <table class="table table-bordered table-condensed table-body-center">
         <thead>
             <tr class=" bg-primary ">
                 <th>Id</th>

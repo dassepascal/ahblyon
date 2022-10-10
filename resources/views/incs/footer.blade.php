@@ -1,5 +1,5 @@
 <footer>
-    <div class="bg-secondary mb-5">
+    <div class="bg-secondary mb-5"style="margin:0px auto; max-width:1262px">
         <div class="row  ">
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-secondary m-2  mb-2">
