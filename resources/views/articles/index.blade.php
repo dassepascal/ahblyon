@@ -8,23 +8,23 @@
             <a class="btn btn-info my-4" href="{{ route('articles.create') }}">Ajouter un nouvel article</a>
         </div>
 
-<div class="table-responsive">
+<div class="responsive-table-line" style="margin:0px auto; max-width:700px"">
     <table class="table table-hover">
         <thead>
-            <tr class="table-hover bg-primary text-light">
-                <th scope="col">Id</th>
-                <th scope="col">Titre</th>
-                <th scope="col">Crée le</th>
-                <th scope="col">Action</th>
+            <tr class=" bg-primary ">
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Crée le</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($articles as $article)
                 <tr>
-                    <th>{{ $article->id }}</th>
-                    <th>{{ $article->title }}</th>
-                    <th>{{ $article->dateFormated() }}</th>
-                    <td class="d-flex">
+                    <td data-title="Id">{{ $article->id }}</td>
+                    <td data-title ="Nom">{{ $article->title }}</td>
+                    <td data-title = "Date">{{ $article->dateFormated() }}</td>
+                    <td data-title = "Action" class="d-flex">
                         {{-- editer --}}
                         <a href="{{ route ('articles.edit',$article->id)}}" class="btn btn-warning mx-3">Editer</a>
 
