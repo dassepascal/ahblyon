@@ -8,7 +8,7 @@
             <a class="btn btn-info my-4" href="{{ route('dons.create') }}">Ajouter un nouveau don</a>
         </div>
 
-<div  class="responsive-table-line" style="margin:0px auto; max-width:700px">
+<div  class="responsive-table-line" style="margin:0px auto; max-width:1286px">
     <table class="table table-bordered table-condensed table-body-center">
         <thead>
             <tr class="bg-primary text-light">
