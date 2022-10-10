@@ -8,23 +8,23 @@
             <a class="btn btn-info my-4" href="{{ route('dons.create') }}">Ajouter un nouveau don</a>
         </div>
 
-<div  class="table-responsive">
-    <table class="table table-hover">
+<div  class="responsive-table-line" style="margin:0px auto; max-width:700px">
+    <table class="table table-bordered table-condensed table-body-center">
         <thead>
-            <tr class="table-hover bg-primary text-light">
-                <th scope="col">Id</th>
-                <th scope="col">Titre</th>
-                <th scope="col">Crée le</th>
-                <th scope="col">Action</th>
+            <tr class="bg-primary">
+                <th >Id</th>
+                <th>Titre</th>
+                <th >Crée le</th>
+                <th >Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($dons as $don)
                 <tr>
-                    <th>{{ $don->id }}</th>
-                    <th>{{ $don->title }}</th>
-                    <th>{{ $don->dateFormated() }}</th>
-                    <td class="d-flex">
+                    <td data-title = "Id">{{ $don->id }}</td>
+                    <td data-title ="Nom">{{ $don->title }}</td>
+                    <td data-title = "Date">{{ $don->dateFormated() }}</td>
+                    <td data-title = "Action" class="d-flex">
                         {{-- editer --}}
                         <a href="{{ route('dons.edit',$don->id) }}" class="btn btn-warning mx-3">Editer</a>
 
