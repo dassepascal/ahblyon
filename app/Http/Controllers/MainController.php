@@ -137,6 +137,8 @@ class Maincontroller extends Controller
         ]);
     }
     public function showParraine(Parraine $parraine){
+        // dd($parraine);
+        // die();
         return view('parraine',[
             'parraine'=> $parraine
         ]);

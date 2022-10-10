@@ -37,7 +37,7 @@ Route::get('/articles', [MainController::class,'indexArticles'])->name('articles
 Route::get('/dons', [MainController::class,'indexDons'])->name('dons');
 Route::get('/informes', [MainController::class,'indexInformes'])->name('informes');
 Route::get('/parraines',[MainController::class,'indexParraines'])->name('parraines');
-Route::get('/parraines/{parraine:slug',[MainController::class,'showParraine'])->name('parraine');
+Route::get('/parraines/{parraine:slug}',[MainController::class,'showParraine'])->name('parraine');
 
 Route::get('/admin/parraines',[ParraineController::class,'index'])->middleware('admin')->name('parraines.index');
 Route::get('/admin/parraines/create',[ParraineController::class,'create'])->middleware('admin')->name('parraines.create');

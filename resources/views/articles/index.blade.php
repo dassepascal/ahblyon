@@ -3,7 +3,7 @@
     {{-- @dump(Session::all()); --}}
 
     <div class="container">
-        <h1 class="text-center my-5">Articles</h1>
+        <h1 class="text-center my-5">Evénements</h1>
         <div class="d-flex justify-content-center">
             <a class="btn btn-info my-4" href="{{ route('articles.create') }}">Ajouter un nouvel article</a>
         </div>
@@ -66,7 +66,7 @@
 
             </tbody>
         </table>
-   
+
     <div class="d-flex justify-content-center mt-5">{{ $articles->links() }}</div>
     </div>
 @endsection
