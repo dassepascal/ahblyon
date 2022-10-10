@@ -9,7 +9,7 @@
 
 <div>
     <ul>
-        <li><a href="{{ route('archive',$archive->id) }}">{{ $archive->created_at }}</a> </li>
+        <li><a href="{{ route('archive',$archive->id) }}">{{ $archive->created_at }}</a> <h6> {{ $archive->title }}</h6> </li>
     </ul>
 
 </div>

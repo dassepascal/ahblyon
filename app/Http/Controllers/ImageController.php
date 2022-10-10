@@ -47,6 +47,22 @@ class ImageController extends Controller
         return  redirect('admin/image-upload')->with('success', 'l\'image a bien été sauvegagé');
     }
 
+    public function deleteImage(Request $request)
+
+    {
+
+        if(Storage::exists('image-upload/3w10y8KJhmb9q4YUmf9kCSNDrNY2k1VilPxM1LK.jpg.png')){
+
+            Storage::delete('image-upload/3w10y8KJhmb9q4YUmf9kCSNDrNY2k1VilPxM1LK.jpg.png');
+            dd('delete');
+
+        }else{
+
+            dd('File does not exists.');
+
+        }
+
+    }
 
 
     public function indexPhoto()
@@ -62,8 +78,21 @@ class ImageController extends Controller
             'categories' => Category::all(),
         ]);
     }
-    public function delete(Photo $photo)
+    public function delete(Photo $photo,Request $request)
     {
+
+        dd($request);
+        if(Storage::exists('image-upload/test.png')){
+
+            Storage::delete('image-upload/test.png');
+            dd('delete');
+
+        }else{
+
+            dd('File does not exists.');
+
+        }
+
         $photo->delete();
 
         return redirect()->route('photo.index')->with('success', "la photo a bien été supprimé");

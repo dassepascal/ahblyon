@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="container">
+<div class="container ">
     <div class="container">
         <h1 class="text-center my-5">Photos</h1>
         <div class="d-flex justify-content-center">
