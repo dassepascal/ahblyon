@@ -36,6 +36,7 @@ Route::get('/', [MainController::class,'home'])->name('home');
 Route::get('/articles', [MainController::class,'indexArticles'])->name('articles');
 Route::get('/dons', [MainController::class,'indexDons'])->name('dons');
 Route::get('/informes', [MainController::class,'indexInformes'])->name('informes');
+Route::get('/informes/{informe:slug}', [MainController::class,'showInforme'])->name('informe');
 Route::get('/parraines',[MainController::class,'indexParraines'])->name('parraines');
 Route::get('/parraines/{parraine:slug}',[MainController::class,'showParraine'])->name('parraine');
 

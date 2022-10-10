@@ -143,4 +143,11 @@ class Maincontroller extends Controller
             'parraine'=> $parraine
         ]);
     }
+    public function showInforme(Informe $informe){
+        // dd($parraine);
+        // die();
+        return view('informe',[
+            'informe'=> $informe
+        ]);
+    }
 }

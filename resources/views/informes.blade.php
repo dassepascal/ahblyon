@@ -9,7 +9,8 @@
             <div class="card my-3">
                 <div class="card-body">
                     <h5 class="card-title ">{{ $informe->title }}</h5>
-                    <a href="{{ $informe->slug}}" class="btn btn-primary"> Lire la suite</a>
+                    {{-- <p class="card-text" >{!! $informe->content !!}</p> --}}
+                    <a href="{{route('informe',$informe->slug)}}" class="btn btn-primary"> Lire la suite</a>
                 </div>
             </div>
         </div>

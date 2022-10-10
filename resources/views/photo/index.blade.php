@@ -9,7 +9,7 @@
         <a class="btn btn-info my-4" href="{{ route('photo.create') }}">Ajouter une photo</a>
     </div>
 
-
+<div class="table-responsive">
     <table class="table table-hover">
         <thead>
             <tr class="table-hover bg-primary text-light">
@@ -69,6 +69,8 @@
 
         </tbody>
     </table>
+</div>
+
     <div class="d-flex justify-content-center mt-5">{{ $photos->links() }}</div>
 </div>
 

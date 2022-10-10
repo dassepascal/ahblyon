@@ -5,10 +5,10 @@
 <div class="container">
     <h1 class="text-center my-5">je m'informe</h1>
     <div class="d-flex justify-content-center">
-        <a class="btn btn-info my-4" href="#">Ajouter une nouvelle information</a>
+        <a class="btn btn-info my-4" href="{{ route('informes.create') }}">Ajouter une nouvelle information</a>
     </div>
 
-
+<div class="table-responsive">
     <table class="table table-hover">
         <thead>
             <tr class="table-hover bg-primary text-light">
@@ -66,6 +66,8 @@
 
         </tbody>
     </table>
+</div>
+
     <div class="d-flex justify-content-center mt-5">{{ $informes->links() }}</div>
 </div>
 

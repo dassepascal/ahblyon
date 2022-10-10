@@ -8,7 +8,7 @@
         <a class="btn btn-info my-4" href="{{ route('parraines.create') }}">Ajouter un nouveau texte</a>
     </div>
 
-
+<div class="table-responsive">
     <table class="table table-hover">
         <thead>
             <tr class="table-hover bg-primary text-light">
@@ -64,6 +64,8 @@
 
         </tbody>
     </table>
+</div>
+  
   <div class="d-flex justify-content-center mt-5">{{ $parraines->links() }}</div>
 </div>
 
