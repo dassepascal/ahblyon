@@ -7,7 +7,7 @@
                     {{-- @dump($photo) --}}
                     @if ($photo->category_id==1)
                     <div class="carousel-item ">
-                        <img src="{{ url('/').'/storage/'.$photo->path}}" alt="#" class="d-block w-100">
+                        <img src="{{ url('/').'/storage/'.$photo->path}}" alt="#" class="d-block w-100 img-fluid">
                         {{-- <img src="{{ Storage::url($photo->path) }}" alt="#" class="d-block w-100"> --}}
                     </div>
                     @endif
