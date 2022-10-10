@@ -9,7 +9,7 @@
             <div class="card my-3">
                 <div class="card-body">
                     <h5 class="card-title ">{{ $parraine->title }}</h5>
-                    <a href="{{ $parraine->slug}}" class="btn btn-primary"> Lire la suite</a>
+                    <a href="{{ route('parraine',$parraine->slug) }}" class="btn btn-primary"> Lire la suite</a>
                 </div>
             </div>
         </div>

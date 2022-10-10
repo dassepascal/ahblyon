@@ -136,4 +136,9 @@ class Maincontroller extends Controller
             'parraines'=>$parraines
         ]);
     }
+    public function showParraine(Parraine $parraine){
+        return view('parraine',[
+            'parraine'=> $parraine
+        ]);
+    }
 }

@@ -11288,13 +11288,3 @@ textarea.form-control-lg {
   }
 }
 /* general*/
-@media screen and (min-width: 768px) {
-  body {
-    background: green;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  body {
-    background: #0b0080;
-  }
-}
