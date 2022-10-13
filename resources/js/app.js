@@ -5,10 +5,15 @@ require('./bootstrap');
 
 var carousel = document.querySelector('.carousel-item').className='carousel-item active';
 var carouselItem = document.querySelector('.carousel-item');
-console.log(carouselItem.firstChild);
+
 
 var carouselDroit = document.getElementById('carouselDroit');
 carouselDroit.children[0].firstElementChild.className ='carousel-item active'
 
+// console.log('hello');
+// const messageSuccess = document.querySelector('#successMessage');
 
+// console.log(messageSuccess);
+//  const close =document.querySelector('#close');
 
+//  console.log(close);

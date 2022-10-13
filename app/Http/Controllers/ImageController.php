@@ -44,7 +44,7 @@ class ImageController extends Controller
 
         $save->save();
         //$this->photoManager->build(new Photo(),$request);
-        return  redirect('admin/image-upload')->with('success', 'l\'image a bien été sauvegagé');
+        return  redirect('admin/photo/create')->with('success', 'l\'image a bien été sauvegagé');
     }
     public function indexPhoto()
     {

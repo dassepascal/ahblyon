@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-success mt-2">Upload</button>
+                    <button type="submit" class="btn btn-success mt-2">Enregistrer</button>
                 </div>
 
             </form>
