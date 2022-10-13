@@ -26,7 +26,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::paginate(7);
-       
+
         return view('articles.index', [
             'articles' =>$articles,
         ]);
@@ -98,6 +98,7 @@ class ArticleController extends Controller
     public function update(ArticleRequest $request, Article $article)
     {
         //dd($this->articleManager);
+        dd($article->title);
         $this->articleManager->build($article, $request);
 
 

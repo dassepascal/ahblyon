@@ -57,7 +57,7 @@ public function __construct(DonManager $donManager)
 
     public function edit(Dons $dons)
     {
-       
+
         return view(
             "dons.edit",
             [
@@ -70,7 +70,7 @@ public function __construct(DonManager $donManager)
     public function update(DonRequest $request, Dons $dons){
         //dd(get_class_methods($this->donManager));
 
-        //dd($dons);
+        dd($dons);
         // $dons->title = $request->input('title');
         // $dons->content = $request ->input('content');
         // $dons->save();

@@ -2,11 +2,11 @@
 
 @section('content')
 
-<div class="jumbotron px-5  ">
-    <h2 class="display-4 text-center ">{{ $informe->title }}</h2>
+<div class="jumbotron px-5 bg-danger ">
+    <h2 class="display-4 text-center h2 ">{{ $informe->title }}</h2>
     {{-- <div class="container">
     </div> --}}
-
+<P>{{ $informe->id }}</P>
     <p >
         {!! $informe->content !!}
     </p>
