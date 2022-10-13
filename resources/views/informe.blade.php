@@ -2,12 +2,12 @@
 
 @section('content')
 
-<div class="jumbotron">
-    <h2 class="display-4 text-center m-5">{{ $informe->title }}</h2>
-    <div class="container">
-    </div>
+<div class="jumbotron px-5  ">
+    <h2 class="display-4 text-center ">{{ $informe->title }}</h2>
+    {{-- <div class="container">
+    </div> --}}
 
-    <p class="text-center">
+    <p >
         {!! $informe->content !!}
     </p>
 
@@ -21,5 +21,5 @@
 
 
 </div>
-
+@include('incs.footer')
 @endsection

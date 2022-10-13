@@ -28,7 +28,7 @@
         @include('incs/flash')
         @yield('content')
 
-        @include('incs.footer')
+        
 
 
     </div>

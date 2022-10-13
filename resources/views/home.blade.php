@@ -37,6 +37,7 @@
             @include('photos')
         </section>
     </div>
+    @include('incs.footer')
 </div>
 
 @endsection
