@@ -98,7 +98,7 @@ class ArticleController extends Controller
     public function update(ArticleRequest $request, Article $article)
     {
         //dd($this->articleManager);
-        dd($article->title);
+        //dd($article->title);
         $this->articleManager->build($article, $request);
 
 

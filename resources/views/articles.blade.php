@@ -4,7 +4,7 @@
         <div class="articles row justify-content-center ">
             @foreach ($articles as $article)
 
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-12">
                 <div class="card my-3">
                     <div class="card-body">
                         <h5 class="card-title ">{{ $article->title }}</h5>
@@ -22,4 +22,5 @@
         <div class="d-flex justify-content-center mt-5">{{ $articles->links() }}
         </div>
     </div>
+
 </div>

@@ -9,7 +9,13 @@
             <div class="card my-3">
                 <div class="card-body">
                     <h5 class="card-title ">{{ $parraine->title }}</h5>
-                    <a href="{{ route('parraine',$parraine->slug) }}" class="btn btn-primary"> Lire la suite</a>
+                    <p class="card-text">{!! $parraine->content !!}</p>
+                    <div>
+                        <a href="{{ asset('pdf/bulletin_parrainage.pdf') }}">Bulletin de parrainage</a>
+                    </div>
+                    {{-- <a href="{{ route('parraine',$parraine->slug) }}" class="btn btn-primary"> Lire la suite</a>
+                    --}}
+                    {{-- <a href="{{ route('parraine',$parraine->slug) }}" class="btn btn-primary"> Lire la suite</a> --}}
                 </div>
             </div>
         </div>
@@ -17,5 +23,6 @@
     </div>
     <div class="d-flex justify-content-center mt-5">{{ $parraines->links() }}
     </div>
+
 </div>
 @endsection

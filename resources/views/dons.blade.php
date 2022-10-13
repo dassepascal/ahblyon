@@ -11,13 +11,15 @@
         <div class="col">
             <div class="card my-3">
                 <div class="card-body">
-                    <h5 class="card-title "> {{ $don->title }}</h5>
+                    <h5 class="card-title h5"> {{ $don->title }}</h5>
                     <p class="card-text">{!! $don->content !!} </p>
                     {{-- <a href="#" class="btn btn-primary"> Tout savoir sur le parrainage</a> --}}
+                    <a href="{{ asset('pdf/Bulletin_adhésion.pdf') }}">Bulletin adhésion</a>
                 </div>
             </div>
         </div>
         @endforeach
     </div>
+    @include('incs.footer')
 </div>
 @endsection
