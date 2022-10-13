@@ -62,18 +62,6 @@ class ImageController extends Controller
     public function delete(Photo $photo,Request $request)
     {
 
-
-        // if(Storage::exists('image-upload/test.png')){
-
-        //     Storage::delete('image-upload/test.png');
-        //     dd('delete');
-
-        // }else{
-
-        //     dd('File does not exists.');
-
-        // }
-
         $photo->delete();
 
         return redirect()->route('photo.index')->with('success', "la photo a bien été supprimé");
