@@ -23,6 +23,6 @@
     </div>
     <div class="d-flex justify-content-center mt-5">{{ $parraines->links() }}
     </div>
-
+    @include('incs.footer')
 </div>
 @endsection

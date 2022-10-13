@@ -12,15 +12,15 @@
     <div class="container-fluid  py-5">
         <section>
             <div class="row">
-                <div class="col-md-4 mt-2 mb-2">
+                <div class="col-md-4  mt-2 mb-2">
 
                     <img src="{{ asset('images/4classe.jpg') }}" alt="image du 32" width="100%" >
                 </div>
-                <div class="col-md-4 mt-2 mb-2">
+                <div class="col-md-4  mt-2 mb-2">
 
                     <img src="{{ asset('images/6-cour-de-ecole.jpg') }}" alt="image du 32" width="100%" height="100%">
                 </div>
-                <div class="col-md-4 mt-2 mb-2">
+                <div class="col-md-4  mt-2 mb-2">
 
                     <img src="{{ asset('images/3-ecole-de-kongodiana.jpg') }}" alt="image du 32" width="100%">
                 </div>

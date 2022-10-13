@@ -11,7 +11,7 @@
                         <p class="card-text">
                             <span class="publie">Publié le : {{ $article->dateFormated() }}</span>
                         </p>
-                        <a href="{{ route('article', $article->slug) }}" class="btn btn-primary"> Lire
+                        <a href="{{ route('article', $article->slug) }}" class="btn btn-primary text-light"> Lire
                             la
                             suite</a>
                     </div>

@@ -16,6 +16,6 @@
 
 @endforeach
         </div>
-
+        @include('incs.footer')
     </div>
 @endsection

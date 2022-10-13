@@ -21,7 +21,7 @@
 
     </div> --}}
 
-
+    @include('incs.footer')
 </div>
 
 @endsection
