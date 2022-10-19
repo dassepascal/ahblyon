@@ -20,29 +20,30 @@ class ImageController extends Controller
         //dd($request);
         $validationData = $request->validate([
 
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
 
         ]);
-        $name = Storage::disk('local')->put('images', $request->image);
-
+        // todo cas ou image > image max
+                 Storage::disk('public')->put('images', $request->image);
+dd($request);
         //$name = $request->file('image')->getClientOriginalName();
-        $filename = time() . '.' . $request->image->extension();
-        $path = $request->file('image')->storeAs(
-            'images',
-            $filename,
-            'public'
-        );
-        $category_id = $request->category;
+        //$filename = time() . '.' . $request->image->extension();
+        //$path = $request->file('image')->storeAs(
+          //  'images',
+          //  $filename,
+          //  'public'
+        //);
+        //$category_id = $request->category;
 
-        $save = new Photo;
+        //$save = new Photo;
 
-        $save->name = $name;
-        $save->path = $path;
+       // $save->name = $name;
+       // $save->path = $path;
 
 
-        $save->category_id = $category_id;
+       // $save->category_id = $category_id;
 
-        $save->save();
+        //$save->save();
         //$this->photoManager->build(new Photo(),$request);
         return  redirect('admin/photo/create')->with('success', 'l\'image a bien été sauvegagé');
     }
