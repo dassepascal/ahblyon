@@ -28,17 +28,33 @@ return [
     |
     */
 
-    'disks' => [
+    // 'disks' => [
 
+    //     'local' => [
+    //         'driver' => 'local',
+    //         'root' => storage_path('app'),
+    //     ],
+     // 'disks' => [
+/**
+ * modification de l'adresse pour fonctionner en distant
+ */
+  'disks' => [
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => public_path('storage'),
         ],
 
+
+        // 'public' => [
+        //     'driver' => 'local',
+        //     'root' => storage_path('storage'),
+        //     'url' => env('APP_URL').'storage',
+        //     'visibility' => 'public',
+        // ],
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('storage'),
-            'url' => env('APP_URL').'storage',
+            'root' => storage_path('app/public'),
+            'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
 

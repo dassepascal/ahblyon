@@ -24,5 +24,6 @@
         {{-- <div class="d-flex justify-content-center mt-5">{{ $articles->links() }}
         </div> --}}
     </div>
+    @include('incs.footer')
 </div>
 @endsection

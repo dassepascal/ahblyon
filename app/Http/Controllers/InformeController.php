@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Informe;
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use App\Manager\InformeManager;
 use App\Http\Requests\InformeRequest;
 
 class InformeController extends Controller
 {
-
     private $informeManager;
 
     public function __construct(InformeManager $informeManager)
@@ -25,9 +24,9 @@ class InformeController extends Controller
     {
         $informes = Informe::paginate(2);
 
-            return view('informes.index', [
-                'informes' =>$informes,
-            ]);
+        return view('informes.index', [
+            'informes' =>$informes,
+        ]);
     }
 
     /**
@@ -49,7 +48,7 @@ class InformeController extends Controller
     public function store(InformeRequest $request)
     {
         $validated = $request->validated();
-        $this->informeManager->build(new Informe(),$request);
+        $this->informeManager->build(new Informe(), $request);
         return redirect()->route('informes.index')->with("success", "l'information a bien été sauvegardé");
     }
 
@@ -71,10 +70,9 @@ class InformeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Informe $informes)
-
     {
         //dd($informes);
-        return view('informes.edit',[
+        return view('informes.edit', [
             'informes' =>$informes,
         ]);
     }
@@ -86,11 +84,9 @@ class InformeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(InformeRequest $request, Informe $informe)
+    public function update(InformeRequest $request, Informe $informes)
     {
-        $informe->title = $request->input('title');
-        $informe->content = $request->input('content');
-        $informe->save();
+        $this->informeManager->build($informes, $request);
         return redirect()->route('informes.index')->with('success', 'l\'information a bien été modifié');
     }
 
@@ -100,7 +96,8 @@ class InformeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete(Informe $informe){
+    public function delete(Informe $informe)
+    {
         $informe->delete();
         return redirect()->route('informes.index')->with('success', "L'info a bien été supprimé !");
     }

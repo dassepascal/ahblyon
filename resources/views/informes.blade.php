@@ -9,8 +9,9 @@
             <div class="card my-3">
                 <div class="card-body">
                     <h5 class="card-title ">{{ $informe->title }}</h5>
-                    {{-- <p class="card-text" >{!! $informe->content !!}</p> --}}
-                    <a href="{{route('informe',$informe->slug)}}" class="btn btn-primary"> Lire la suite</a>
+                    {{-- <p>{{ $informe->id }}</p> --}}
+                    <p class="card-text" >{!! $informe->content !!}</p>
+                    {{-- <a href="{{route('informe',$informe->slug)}}" class="btn btn-primary"> Lire la suite</a> --}}
                 </div>
             </div>
         </div>
@@ -18,5 +19,6 @@
     </div>
     <div class="d-flex justify-content-center mt-5">{{ $informes->links() }}
     </div>
+    @include('incs.footer')
 </div>
 @endsection

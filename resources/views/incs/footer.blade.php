@@ -17,11 +17,11 @@
                 <address class="card bg-secondary m-2 px-3 pt-3">
                     <h5 class="card-title">Contact</h5>
                     <p class-text>
-                        AHBLYON <br>
-                        9 rue Du Chemin <br>
-                        69 000 Lyon <br>
-                        asbh@sfr.fr <br>
-                        tél:123456789 <br>
+                        KONGODIANA <br>
+                        40 bis rue Antoine Lumière <br>
+                        69 008 Lyon <br>
+                        kongodiana@ymail.com <br>
+                        tél : 06 33 39 32 08 <br>
                     </p>
                 </address>
             </div>

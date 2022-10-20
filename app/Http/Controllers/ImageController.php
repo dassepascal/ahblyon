@@ -17,7 +17,7 @@ class ImageController extends Controller
 
     public function store(Request $request)
     {
-        dd($request);
+        //dd($request);
         $validationData = $request->validate([
 
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
@@ -33,15 +33,11 @@ class ImageController extends Controller
             'public'
         );
         $category_id = $request->category;
-
+        //$path = $request->file('image')->store('public/images');
         $save = new Photo;
-
         $save->name = $name;
         $save->path = $path;
-
-
         $save->category_id = $category_id;
-
         $save->save();
         //$this->photoManager->build(new Photo(),$request);
         return  redirect('admin/photo/create')->with('success', 'l\'image a bien été sauvegagé');
@@ -61,18 +57,6 @@ class ImageController extends Controller
     }
     public function delete(Photo $photo,Request $request)
     {
-
-
-        // if(Storage::exists('image-upload/test.png')){
-
-        //     Storage::delete('image-upload/test.png');
-        //     dd('delete');
-
-        // }else{
-
-        //     dd('File does not exists.');
-
-        // }
 
         $photo->delete();
 

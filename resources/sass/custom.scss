@@ -1,6 +1,12 @@
 /* general*/
 
-
+.h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.h2{
+    font-size: 2rem;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
 
@@ -14,6 +20,11 @@
 
 }
 @media screen and (max-width: 767.98px) {
+    .h1{
+
+        font-size: 1.5rem;
+    }
+
 
     // body{
     //     background: rgb(11, 0, 128);

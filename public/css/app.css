@@ -11288,7 +11288,20 @@ textarea.form-control-lg {
   }
 }
 /* general*/
+.h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.h2 {
+  font-size: 2rem;
+}
+
 @media screen and (max-width: 767.98px) {
+  .h1 {
+    font-size: 1.5rem;
+  }
+
   .responsive-table-line td:before {
     content: attr(data-title);
   }
