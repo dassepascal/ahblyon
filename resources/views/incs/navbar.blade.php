@@ -1,46 +1,47 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#"> <img src="{{asset('images/logo-kongodiana.jpg') }}" alt="logo de l'association kongodania" width="90"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-        <ul class="navbar-nav ">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('home')}}">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('informes')}}">Je m'informe</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('parraines')}}">Je parraine</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('dons')}}">Je fais un don</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('archives')}}">Archives</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('contact')}}">Contact</a>
-          </li>
-          {{-- <li class="nav-item">
-            <a  class="nav-link active" aria-current="page" href="{{ route('admin') }}">Admin</a>
-          </li> --}}
-        </ul>
+    <div class="container border border-darck shadow-lg">
+        <a class="navbar-brand" href="#"> <img src="{{asset('images/logo-kongodiana.jpg') }}"
+                alt="logo de l'association kongodania" width="90"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('home')}}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('informes')}}">Je m'informe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('parraines')}}">Je parraine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('dons')}}">Je fais un don</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('archives')}}">Archives</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('contact')}}">Contact</a>
+                </li>
+            </ul>
 
-      </div>
-      @include('incs.navbar-admin')
+        </div>
+        @include('incs.navbar-admin')
 
     </div>
-  </nav>
+</nav>
 
 
 
 {{-- <nav class="navbar ligth-mode " role="navigation">
     <div class="navbar__logo">
         <img src="{{asset('images/logo-kongodiana.jpg') }}" alt="logo de l'association kongodania" width="80">
-  <span  class="ligne" ><h1> Association Kongodania</h1></span>
+        <span class="ligne">
+            <h1> Association Kongodania</h1>
+        </span>
     </div>
     <ul class="navbar__links">
         <li class="navbar__link first"><a href="{{ route('home')}}">Accueil</a></li>
@@ -57,25 +58,25 @@
 </nav> --}}
 
 
- {{-- <ul class="navbar-nav ml-auto ">
-        @if (Auth::user())
-        @if (Auth::user()->role === 'ADMIN')
-        <li class="nav-item ">
-            <a class="nav-link" href="{{ route('articles.index')}} "> Espace Admin</a>
-          </li>
-        @endif
-        <li class="nav-item">
-            <form action="{{ route('logout')}}" method="post">
-                @csrf
+{{-- <ul class="navbar-nav ml-auto ">
+    @if (Auth::user())
+    @if (Auth::user()->role === 'ADMIN')
+    <li class="nav-item ">
+        <a class="nav-link" href="{{ route('articles.index')}} "> Espace Admin</a>
+    </li>
+    @endif
+    <li class="nav-item">
+        <form action="{{ route('logout')}}" method="post">
+            @csrf
             <button type="submit" class="btn">Déconnexion</button>
         </form>
 
-          </li>
+    </li>
 
-        @else
-        <li class="nav-item active">
-            <a class="nav-link" href="{{ route('login')}} ">Me connecter</a>
-          </li>
-        @endif
+    @else
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ route('login')}} ">Me connecter</a>
+    </li>
+    @endif
 
-      </ul> --}}
+</ul> --}}

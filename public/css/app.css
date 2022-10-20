@@ -11297,6 +11297,10 @@ textarea.form-control-lg {
   font-size: 2rem;
 }
 
+.grey {
+  background: #e5e6e8;
+}
+
 @media screen and (max-width: 767.98px) {
   .h1 {
     font-size: 1.5rem;
