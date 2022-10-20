@@ -23,7 +23,7 @@ class ImageController extends Controller
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 
         ]);
-        // todo cas ou image > image max
+        // todo cas ou image > image max ->message erreur
        $name = Storage::disk('public')->put('images', $request->image);
 
         //$name = $request->file('image')->getClientOriginalName();
@@ -36,13 +36,9 @@ class ImageController extends Controller
         $category_id = $request->category;
         //$path = $request->file('image')->store('public/images');
         $save = new Photo;
-
         $save->name = $name;
         $save->path = $path;
-
-
         $save->category_id = $category_id;
-
         $save->save();
         //$this->photoManager->build(new Photo(),$request);
         return  redirect('admin/photo/create')->with('success', 'l\'image a bien été sauvegagé');
