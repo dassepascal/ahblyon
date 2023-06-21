@@ -25,6 +25,7 @@
                 <td data-title = "Id">{{ $informe->id }}</td>
                 <td data-title ="Nom">{{ $informe->title }}</td>
                 <td data-title= "Date">{{ $informe->dateFormated() }}</td>
+              
                 <td data-title = "Action" class="d-flex">
                     {{-- editer --}}
                     <a href="{{ route('informes.edit',$informe->id) }}" class="btn btn-warning mx-3 text-light">Editer</a>

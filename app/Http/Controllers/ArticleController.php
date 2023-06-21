@@ -52,14 +52,14 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\ArticleRequest  $request
+     * @param  \App\Http\ArticleRequest 
      * @return \Illuminate\Http\Response
      */
     public function store(ArticleRequest $request)
     {
         $validated = $request->validated();
         $this->articleManager->build(new Article(), $request);// todo
-        return redirect()->route('articles.index')->with("success", "l'article a bien été sauvegardé");
+        return redirect()->route('articles.index')->with("success", "l'événement a bien été sauvegardé");
     }
 
     /**
@@ -106,7 +106,7 @@ class ArticleController extends Controller
         //  $article->subtitle = $request->input('subtitle');
         //  $article->content = $request->input('content');
         //  $article->save();
-        return redirect()->route('articles.index')->with('success', "L'article a bien modifié !");
+        return redirect()->route('articles.index')->with('success', "L'événement a bien modifié !");
     }
 
     /**
@@ -119,6 +119,6 @@ class ArticleController extends Controller
     {
 
         $article->delete();
-        return redirect()->route('articles.index')->with('success', "L'article a bien été supprimé !");
+        return redirect()->route('articles.index')->with('success', "L'événement a bien été supprimé !");
     }
 }

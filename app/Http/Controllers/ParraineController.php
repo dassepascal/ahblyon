@@ -84,7 +84,7 @@ class ParraineController extends Controller
         $parraine->title = $request->input('title');
         $parraine->content = $request->input('content');
         $parraine->save();
-        return redirect()->route('parraines.index')->with('success', 'le parrainage a bien été modifié');
+        return redirect()->route('parraines.index')->with('success', 'le texte a bien été modifié');
     }
 
     /**
@@ -96,6 +96,6 @@ class ParraineController extends Controller
     public function delete(Parraine $parraine)
     {
         $parraine->delete();
-        return redirect()->route('parraines.index')->with('success', "le parraine a bien été supprimé");
+        return redirect()->route('parraines.index')->with('success', "le texte a bien été supprimé");
     }
 }

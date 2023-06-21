@@ -25,6 +25,7 @@
                     <div class="carousel-item ">
 
                         <img src="{{ url('/').'/storage/'.$photo->path}}" alt="#" class="d-block img-fluid  w-100">
+                        {{-- <img src="{{ Storage::url($photo->path) }}" alt="#" class="d-block w-100"> --}}
                     </div>
                     @endif
                     @endforeach

@@ -18,7 +18,7 @@ public function __construct(DonManager $donManager)
     public function index()
     {
         $dons = Dons::paginate(2);
-        //dd($dons);
+        dd($dons);
         return view('dons.index', [
             'dons' =>$dons,
         ]);

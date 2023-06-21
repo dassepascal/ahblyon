@@ -15,15 +15,11 @@ class InformeController extends Controller
     {
         $this->informeManager = $informeManager;
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $informes = Informe::paginate(2);
-
+//dd($informes);
         return view('informes.index', [
             'informes' =>$informes,
         ]);

@@ -5,7 +5,7 @@
     <div class="container">
         <h1 class="text-center my-5">Evénements</h1>
         <div class="d-flex justify-content-center">
-            <a class="btn btn-info my-4" href="{{ route('articles.create') }}">Ajouter un nouvel article</a>
+            <a class="btn btn-info my-4" href="{{ route('articles.create') }}">Ajouter un nouvel événement</a>
         </div>
 
 <div class="responsive-table-line" style="margin:0px auto; max-width:1286px"">

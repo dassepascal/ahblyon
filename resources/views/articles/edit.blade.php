@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container">
-        <h1 class="text-center mt-5">Editer un  article</h1>
+        <h1 class="text-center mt-5">Editer un  événement</h1>
         <form action="{{ route('articles.update',$articles->id) }}" method="post">
             @method('PUT')
             @csrf
@@ -59,7 +59,7 @@
                 </script>
             </div>
             <div class="d-flex justify-content-center my-4">
-                <button type="submit" class="btn btn-primary">Modifier un article</button>
+                <button type="submit" class="btn btn-primary">Modifier un événement</button>
             </div>
         </form>
     </div>

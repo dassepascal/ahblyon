@@ -3,7 +3,7 @@
 @section('content')
     <div class="p-5 mb-4 bg-light rounded-3 mt-5">
         <div class="container-fluid py-5">
-            <form>
+            <form id="contact-form" method="" action="" role="form">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Votre email</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

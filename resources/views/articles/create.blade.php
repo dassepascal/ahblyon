@@ -1,7 +1,7 @@
 @extends('base')
 @section('content')
     <div class="container">
-        <h1 class="text-center mt-5">Poster un nouvel article</h1>
+        <h1 class="text-center mt-5">Poster un nouvel événement</h1>
         <form action="{{ route('articles.store') }}" method="post">
 
             @csrf
@@ -17,7 +17,7 @@
                     @enderror
                 </div>
             </div>
-         
+
             <textarea id="tinycme-editor" name="content" class="form-control w-100 @error('content') is-invalid @enderror"></textarea>
             @error('content')
                 <span class="invalid-feedback" role="alert">
@@ -33,7 +33,7 @@
     </script>
     </div>
     <div class="d-flex justify-content-center my-4">
-        <button type="submit" class="btn btn-primary">Poster l'article</button>
+        <button type="submit" class="btn btn-primary">Poster l'événement</button>
     </div>
     </form>
     </div>

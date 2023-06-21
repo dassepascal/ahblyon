@@ -24,6 +24,6 @@
         </div>
         </center>
         <center class="mt-6">
-        <a href="{{url()->previous()}}" class="text-gray-500 font-mono text-xl bg-gray-200 p-3 rounded-md hover:shadow-md">Retour </a>
+        <a href="{{ route('home')}}" class="text-gray-500 font-mono text-xl bg-gray-200 p-3 rounded-md hover:shadow-md">Retour </a>
         </center>
         </div>
